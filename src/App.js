@@ -3,18 +3,17 @@ import './App.css';
 import Worlds from './components/Worlds';
 import WorldsRedux from './components/WorldsRedux';
 
+import HeaderRedux from './components/HeaderRedux';
+
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-          <h1> React installed </h1>
-      </header>
-      <main>
+    <div>
+       <header> <HeaderRedux /></header>
         <Worlds />
         <Worlds />
         <WorldsRedux />
         <WorldsRedux />
-      </main>
+      
     </div>
   );
 }
