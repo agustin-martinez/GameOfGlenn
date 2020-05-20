@@ -50,7 +50,9 @@ ul {
 
 li {
   float: left;
+  margin-right: 0.5em;
 }
+
 
 li a, .dropbtn {
   display: inline-block;

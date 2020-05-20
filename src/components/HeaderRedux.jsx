@@ -3,22 +3,22 @@ import React from 'react';
 const HeaderRedux = ({setScreenFromHeader}) => {
 
     return(
-        <div class="header">
+        <div className="header">
             <img src="logo.svg" alt="GAME OF GLENN"></img>
         
         <ul>
-            <li><a href="#home">HEM</a></li>
-            <li class="dropdown">
-                <a href="javascript:void(0)" class="dropbtn">VÄRLDAR</a>
-                <div class="dropdown-content">
-                <a href="#">HUFVUDSTADEN</a>
-                <a href="#">SLOTTSSKOGEN</a>
-                <a href="#">DONSÖ</a>
-                <a href="#">HISINGEN</a>
+            <li onClick={() => setScreenFromHeader('Home')}>HEM</li>
+            <li className="dropdown">
+                <div className="dropbtn">VÄRLDAR</div>
+                <div className="dropdown-content">
+                <div onClick={() => setScreenFromHeader('Hufvudstaden')} >HUFVUDSTADEN</div>
+                <div onClick={() => setScreenFromHeader('Slottsskogen')}>SLOTTSSKOGEN</div>
+                <div onClick={() => setScreenFromHeader('Donso')}>DONSÖ</div>
+                <div onClick={() => setScreenFromHeader('Hisingen')} >HISINGEN</div>
                 </div>
             </li>
-            <li><a href="#news">KARAKTÄRER</a></li>
-            <li><a href="#news">OM GOG</a></li>
+            <li><div onClick={() => setScreenFromHeader('Characters')} >KARAKTÄRER</div></li>
+            <li><div onClick={() => setScreenFromHeader('About')} >OM GOG</div></li>
            
         </ul>
 

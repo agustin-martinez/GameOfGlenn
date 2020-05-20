@@ -1,6 +1,6 @@
 import React from 'react';
 
-const OmOss = () =>
+const About = () =>
 {
 	return (
 		<div className="">
@@ -29,4 +29,4 @@ const OmOss = () =>
 	)
 }
 
-export default OmOss;
+export default About;
