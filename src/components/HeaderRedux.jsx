@@ -1,6 +1,6 @@
 import React from 'react';
 
-const HeaderRedux = () => {
+const HeaderRedux = ({setScreenFromHeader}) => {
 
     return(
         <div class="header">
