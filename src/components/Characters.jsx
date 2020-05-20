@@ -6,7 +6,7 @@ class Characters extends Component {
         <div className="Characters">
         <p>Tobias den tossige.</p>
         <br />
-        <p>En själalös vandrare som saknar både samvete och goda intentioner</p>
+        <p>En själalös vandrare som saknar både samvete och goda intentioner.</p>
         <br />
         <p>Id: 1</p>
       </div>
