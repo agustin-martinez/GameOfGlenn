@@ -1,20 +1,7 @@
-.SearchBar {
-  background-color: lightblue;
-  border: 1px solid black;
-  padding-top: 2em;
-}
-
-.Characters {
-  border: 1px solid black;
-  padding: 1em;
-  margin: 0 10em;
-  border-radius: 4px;
-}
-
 .App {
   text-align: center;
-  border: none;
 }
+
 
 .App-header {
   background-color: #282c34;
