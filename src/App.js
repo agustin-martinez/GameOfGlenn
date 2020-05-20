@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Worlds from './components/Worlds';
 import WorldsRedux from './components/WorldsRedux';
+import OmOss from './components/OmOss';
 
 function App() {
   return (
