@@ -23,26 +23,26 @@ function App() {
   let content = null;
   switch (currentScreen) {
       case HOME:
-           content = ( <Home /> )
-           break;
+          content = ( <Home /> )
+          break;
       case HUFVUDSTADEN:
           content = ( <Hufvudstaden /> )
           break;
       case SLOTTSSKOGEN:
           content = ( <Slottsskogen /> )
           break;
-       case DONSO:
-             content = ( <Donso /> )
-             break;
-       case HISINGEN:
-             content = ( <Hisingen /> )
-             break;
+      case DONSO:
+            content = ( <Donso /> )
+            break;
+      case HISINGEN:
+            content = ( <Hisingen /> )
+            break;
       case CHARACTERS:
           content = ( <Characters /> )
           break;
-       case ABOUT:
-           content = ( <About /> )
-           break;
+      case ABOUT:
+          content = ( <About /> )
+          break;
       default:
           content = ( <Home /> )
 }

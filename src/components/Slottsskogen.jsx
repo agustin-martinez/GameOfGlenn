@@ -5,7 +5,7 @@ const Slottsskogen = () => {
 
     return (
         <div className="border">
-           Slottsskogen
+            Slottsskogen
             
         </div>
     )

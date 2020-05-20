@@ -19,7 +19,7 @@ const HeaderRedux = ({setScreenFromHeader}) => {
             </li>
             <li><div onClick={() => setScreenFromHeader('Characters')} >KARAKTÄRER</div></li>
             <li><div onClick={() => setScreenFromHeader('About')} >OM GOG</div></li>
-           
+
         </ul>
 
         

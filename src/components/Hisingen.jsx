@@ -4,7 +4,7 @@ const Hisingen = () => {
 
     return (
         <div className="border">
-           Hisingen
+            Hisingen
         </div>
     )
 }
