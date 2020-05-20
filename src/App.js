@@ -4,6 +4,7 @@ import SearchBar from './components/SearchBar';
 import Characters from './components/Characters';
 import Worlds from './components/Worlds';
 import WorldsRedux from './components/WorldsRedux';
+import OmOss from './components/OmOss';
 
 import HeaderRedux from './components/HeaderRedux';
 
