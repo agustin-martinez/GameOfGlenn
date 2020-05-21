@@ -5,7 +5,10 @@ const Slottsskogen = () => {
 
     return (
         <div className="border">
-            Slottsskogen
+            <div>Slottsskogen</div>
+                <div>
+                    <img src="Slottsskogen.svg" alt="Karta över Slottsskogen"></img>
+                </div>
             
         </div>
     )
