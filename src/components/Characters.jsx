@@ -26,7 +26,7 @@ const SearchBar = (
   )
 
     const outputCharacters = charactersData.map(charItem => (
-        <div className="Characters" key={charItem.character.name}>
+        <div className="persons-item" key={charItem.character.name}>
             <div> NAME: {charItem.character.name} </div>
             <div> WORLD {charItem.character.world} </div>
             <div> STRENGHT: {charItem.strength} </div>
@@ -36,7 +36,7 @@ const SearchBar = (
     return (
         <div>
             {SearchBar}
-            {outputCharacters}
+            <div className="persons">{outputCharacters}</div>
             <AddCharacter />
         </div>
     )

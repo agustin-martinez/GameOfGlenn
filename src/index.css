@@ -114,6 +114,24 @@ li.dropdown {
 
 /* CSS för världarna*/
 
+.planets-item {
+	height: 7em;
+  border:1.5px solid black;
+  background: rgb(5, 5, 5);
+  padding-bottom: 0.5em;
+  padding-top: 0.5em;
+	display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 15px;
+}
+
+.persons {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  grid-gap: 1em;
+}
+
 img{
   float: right;
   position: relative;
