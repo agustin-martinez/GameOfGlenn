@@ -1,20 +1,18 @@
 import React, { useState } from 'react';
+import AddCharacter from '../components/AddCharacter';
+import { useSelector } from 'react-redux';
 
-const charactersData = [
-    { name: 'Ragnhild', world: 'Hono', strength: 8},
-    { name: 'Botlof', world: 'Slottskogen', strength: 9},
-    { name: 'Garnienka', world: 'Donso', strength: 6},
-    { name: 'Gomba', world: 'Slottskogen', strength: 10}
-]
+// const charactersData = [
+//     { name: 'Ragnhild', world: 'Hono', strength: 8},
+//     { name: 'Botlof', world: 'Slottskogen', strength: 9},
+//     { name: 'Garnienka', world: 'Donso', strength: 6},
+//     { name: 'Gomba', world: 'Slottskogen', strength: 10}
+// ]
 
 
 
 const Characters = () => {
-    const [charactersList, setcharactersData] = useState(charactersData)
-
-    function deleteCharacter (charDel) {
-        setcharactersData(charactersList.filter(x => x !== charDel));
-      }
+    const charactersData = useSelector(state => state.characters)
 
     
 const SearchBar = (
@@ -27,18 +25,19 @@ const SearchBar = (
     </div>
   )
 
-    const outputCharacters = charactersList.map(charactersItem => (
-        <div className="Characters" key={charactersItem.name}>
-            <div> NAME: {charactersItem.name} </div>
-            <div> WORLD {charactersItem.world} </div>
-            <div> STRENGHT: {charactersItem.strength} </div>
-            <button  onClick={() => deleteCharacter(charactersItem)}>Delete</button>
+    const outputCharacters = charactersData.map(charItem => (
+        <div className="Characters" key={charItem.character.name}>
+            <div> NAME: {charItem.character.name} </div>
+            <div> WORLD {charItem.character.world} </div>
+            <div> STRENGHT: {charItem.strength} </div>
+            {/* <button  onClick={() => deleteCharacter(charactersItem)}>Delete</button> */}
         </div>
     ))
     return (
         <div>
             {SearchBar}
             {outputCharacters}
+            <AddCharacter />
         </div>
     )
 }
