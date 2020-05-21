@@ -3,14 +3,14 @@ import React from 'react';
 const About = () =>
 {
 	return (
-		<div className="">
+		<div className="border">
 			<div className="">
-				<h1 className="">
+				<h1 className="h1">
 					Om GOG
 				</h1>
 			</div>
 			<div className="">
-				<p className="">
+				<p className="p1">
 					För mer än ett sekel sedan siktade vi mot att ta över
 					världen. Vi var bara några killar med vårat första spel och
 					en passion för spel som inte kunde förnekas.

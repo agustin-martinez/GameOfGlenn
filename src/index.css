@@ -1,22 +1,35 @@
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue','Didact Gothic'
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue','Didact Gothic','Game of Thrones'
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
+}
+html {
+  min-height: 100%;
+  background: linear-gradient(0deg, #1E3032 19.84%, #374C4F 71.64%);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+main{
+  display: flex;
+  justify-content: center;
+ 
+}
 
 .border {
-  border: 1px solid black;
+  
   padding: 1em;
-  margin: 1em;
+  margin: 10em;
+  margin-top: 0.25em;
   border-radius: 4px;
+  max-width: 1100px;
+  
 }
 
 .header {
@@ -50,9 +63,7 @@ ul {
 
 li {
   float: left;
-  margin-right: 0.5em;
 }
-
 
 li a, .dropbtn {
   display: inline-block;
@@ -99,4 +110,27 @@ li.dropdown {
     display: block;
     text-align: left;
   }
+}
+
+/* CSS för världarna*/
+
+img{
+  float: right;
+  position: relative;
+  margin-left: 1em;
+
+}
+.p1{
+  text-align: justify;
+  font-size: larger;
+  font-family: 'Didact Gothic';
+  color: #E8E8E8;
+}
+.h1{
+  color: #E8E8E8;
+  font-family:"Game of Thrones";
+}
+.h2{
+  color: #E8E8E8;
+  font-family:"Game of Thrones";
 }
