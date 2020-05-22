@@ -1,18 +1,20 @@
 import React, { useState } from 'react';
 import AddCharacter from '../components/AddCharacter';
 import { useSelector } from 'react-redux';
-
-// const charactersData = [
-//     { name: 'Ragnhild', world: 'Hono', strength: 8},
-//     { name: 'Botlof', world: 'Slottskogen', strength: 9},
-//     { name: 'Garnienka', world: 'Donso', strength: 6},
-//     { name: 'Gomba', world: 'Slottskogen', strength: 10}
-// ]
-
+import { useDispatch } from 'react-redux'
+import { actions } from '../features/characters'
+import '../popup.css';
 
 
 const Characters = () => {
+    const dispatch = useDispatch();
     const charactersData = useSelector(state => state.characters)
+    const [showAdd, setShowAdd] = useState(false);
+    
+    let maybeAdd = null;
+    if( showAdd ) {
+        maybeAdd = <AddCharacter setShowAddChild={setShowAdd}/> ;
+    }
 
     
 const SearchBar = (
@@ -26,18 +28,23 @@ const SearchBar = (
   )
 
     const outputCharacters = charactersData.map(charItem => (
-        <div className="persons-item" key={charItem.character.name}>
+        <div className="planets-item" key={charItem.character.name}>
             <div> NAME: {charItem.character.name} </div>
             <div> WORLD {charItem.character.world} </div>
             <div> STRENGHT: {charItem.strength} </div>
-            {/* <button  onClick={() => deleteCharacter(charactersItem)}>Delete</button> */}
+            <button  onClick={() => dispatch(actions.removeCharacter(charItem.character.name))}>Ta bort</button>
         </div>
     ))
     return (
-        <div>
+        <div className="border">
+            
             {SearchBar}
+            <div className="container">
             <div className="persons">{outputCharacters}</div>
-            <AddCharacter />
+            </div>
+            <button onClick={() => setShowAdd(!showAdd)}>Toggle</button>
+            {maybeAdd}
+            
         </div>
     )
 }
