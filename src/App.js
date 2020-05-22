@@ -3,11 +3,7 @@ import Start from "./components/Start";
 import "./App.css";
 
 function App() {
-  return (
-    <div className="App">
-      <Start />
-    </div>
-  );
+  return <Start></Start>;
 }
 
 export default App;
