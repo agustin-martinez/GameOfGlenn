@@ -20,11 +20,26 @@ const initialState = [
      strength: 4}
 ]
 
+// const reducer = createReducer(initialState, {
+//     [addToCharacters]: (state, action) => [
+//         ...state,
+//         { character: action.payload, strenght: 1 }
+//     ]
+// }
+// )
+
 const reducer = createReducer(initialState, {
-    [addToCharacters]: (state, action) => [
-        ...state,
-        { character: action.payload, strenght: 1 }
-    ]
+    [addToCharacters]: (state, action) => {
+            return [
+                ...state,
+                { character: action.payload, strenght: 1 }
+            ];
+        
+    },  // addToCart
+
+    [removeCharacter]: (state, action) => (
+        state.filter(cartItem => cartItem.character.name !== action.payload)
+    )
 })
 
 // function alreadyAdded () {
