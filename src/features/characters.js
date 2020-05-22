@@ -10,14 +10,10 @@ const decreaseStrength = createAction('decrease Strenth')
 const actions = { addToCharacters, removeCharacter, increaseStrength, decreaseStrength };
 
 const initialState = [
-     { character: {name: 'Ragnhild', world: 'Hono'},
-     strength: 8},
-     { character: {name: 'd', world: 'Hono'},
-     strength: 5},
-     { character: {name: 's', world: 'Hono'},
-     strength: 3},
-     { character: {name: 'fe', world: 'Hono'},
-     strength: 4}
+     { character: {name: 'Ragnhild', world: 'Hono', backstory: 'fdffd', strength: 6, intelligence: 5 }},
+     { character: {name: 'd', world: 'Hono'}},
+     { character: {name: 's', world: 'Hono'}},
+     { character: {name: 'fe', world: 'Hono'}}
 ]
 
 // const reducer = createReducer(initialState, {
@@ -32,7 +28,7 @@ const reducer = createReducer(initialState, {
     [addToCharacters]: (state, action) => {
             return [
                 ...state,
-                { character: action.payload, strenght: 1 }
+                { character: action.payload}
             ];
         
     },  // addToCart
