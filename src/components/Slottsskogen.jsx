@@ -10,7 +10,9 @@ const Slottsskogen = () => {
         <div className="Characters" key={charItem.character.name}>
             <div> NAME: {charItem.character.name} </div>
             <div> WORLD {charItem.character.world} </div>
-            <div> STRENGHT: {charItem.strength} </div>
+            <div> INTELLIGENCE: {charItem.character.intelligence} </div>
+            <div> STRENGHT: {charItem.character.strength} </div>
+            <div> BACKSTORY: {charItem.character.backstory} </div>
             {/* <button  onClick={() => deleteCharacter(charactersItem)}>Delete</button> */}
         </div>
     ))
