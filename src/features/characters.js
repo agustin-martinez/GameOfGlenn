@@ -5,6 +5,8 @@ const removeCharacter = createAction('remove from characters');
 const increaseStrength = createAction('increase Strenth')
 const decreaseStrength = createAction('decrease Strenth')
 
+// const alredyAdded = createAction('if alredy added');
+
 const actions = { addToCharacters, removeCharacter, increaseStrength, decreaseStrength };
 
 const initialState = [
@@ -24,5 +26,28 @@ const reducer = createReducer(initialState, {
         { character: action.payload, strenght: 1 }
     ]
 })
+
+// function alreadyAdded () {
+    
+// }
+
+// const reducer = createReducer(initialState, {
+//     [addToCharacters]: (state, action) => {
+//         let found = state.find(characterItem => characterItem.character.name === 
+//         action.payload.name);
+//         if(found) {
+//             alreadyAdded(action.payload.name)
+//             console.log('already added')
+//         } else {
+//             return [
+//                 ...state, { character: action.payload, strenght: 1 }
+//             ];
+//         }
+//     }
+// })
+
+
+
+
 
 export { actions, reducer }

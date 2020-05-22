@@ -1,16 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux'
 import { actions } from '../features/characters'
+import '../form.css';
+import '../popup.css';
 
-const AddCharacter = () => {
+
+
+const AddCharacter = ({setShowAddChild}) => {
 const dispatch = useDispatch();
 //--------------------------------------------------------Persons
 const [valueName, setValueName] = useState([]);
-const [valueHomeworld, setValueHomeworld] = useState([]);
-const [valueBirthyear, setValueBirthyear] = useState([]);
-const [favourites, setFavourites] = useState([])
+const [valueHomeworld, setValueHomeworld] = useState('');
+const [valueStrength, setValueStrength] = useState([]);
+const [character, setCharacter] = useState({mess: 'Ingen karaktär inlagd ännu'})
 
-const [touchedBirthyear, setTouchedBirthyear] = useState(false);
+const [touchedStrength, setTouchedStrength] = useState(false);
 const [touchedHomeWorld, setTouchedHomeWorld] = useState(false);
 const [touchedName, setTouchedName] = useState(false);
 
@@ -21,11 +25,19 @@ const handleChangeFormName = event => {
 const handleChangeFormHomeworld = event => {
   setValueHomeworld(event.target.value);
 };
-const handleChangeFormBirthyear = event => {
-  setValueBirthyear(event.target.value);
+const handleChangeFormStrength = event => {
+  setValueStrength(event.target.value);
 };
+//-----------------------------------------------
+
 
 //----------------------------------Validation Person
+
+let btnDisable = true;
+let btnDisableName = true;
+let btnDisableHomeworld = true;
+let btnDisableiBrthyear = true;
+
 const isValidLength = l => {
     if  (l.length < 2 || l.length > 20) 
     return false;
@@ -56,22 +68,18 @@ const isValidNumber = x => {
   return !isNaN(maybeNumber)
 
 }
-let cssClassBirthyear = '';
-if( touchedBirthyear ) {
-  if( isValidNumber(valueBirthyear) )
-    cssClassBirthyear = 'valid';
+let cssClassStrength = '';
+if( touchedStrength ) {
+  if( isValidNumber(valueStrength) )
+    cssClassStrength = 'valid';
   else
-    cssClassBirthyear = 'invalid'
+    cssClassStrength = 'invalid'
 }
 
-if( isValidNumber(valueBirthyear) ) {
-cssClassBirthyear = 'valid';
+if( isValidNumber(valueStrength) ) {
+cssClassStrength = 'valid';
 }
 
-let btnDisable = true;
-let btnDisableName = true;
-let btnDisableHomeworld = true;
-let btnDisableiBrthyear = true;
 
 if( touchedName ) {
   if( isValidLength(valueName) )
@@ -88,7 +96,7 @@ if( touchedHomeWorld ) {
 }
 
 
-if( isValidNumber(valueBirthyear) ) {
+if( isValidNumber(valueStrength) ) {
 btnDisableiBrthyear = false;
 } else {
 btnDisableiBrthyear = true;
@@ -114,30 +122,30 @@ if( touchedHomeWorld ) {
   if( isValidLength(valueHomeworld) )
   homeWorldValMess = ''
   else
-  homeWorldValMess = 'Please add at least 3 characters and max 20'
+  homeWorldValMess = 'Please chose a world'
 }
 
-let birthyearValMess = '';
-if( touchedBirthyear ) {
-  if( isValidNumber(valueBirthyear) )
-    birthyearValMess = ''
+let strengthValMess = '';
+if( touchedStrength ) {
+  if( isValidNumber(valueStrength) )
+    strengthValMess = ''
   else
-    birthyearValMess = 'Please add(only numbers) atleast 1 digit and max 3'
+    strengthValMess = 'Please add(only numbers) atleast 1 digit and max 3'
 }
 
   function clearFormsPerson() {
     setValueName('');
     setValueHomeworld('');
-    setValueBirthyear('');
-    setTouchedBirthyear(false)
+    setValueStrength('');
+    setTouchedStrength(false)
     setTouchedHomeWorld(false);
     setTouchedName(false);
   }
 
   const handleSubmit = event => {
-  if (valueName && valueHomeworld && valueBirthyear) {
+  if (valueName && valueHomeworld && valueStrength) {
     dispatch(actions.addToCharacters({name: valueName, world: valueHomeworld}))
-    // setFavourites({name: valueName, world: valueHomeworld});
+    setCharacter({name: valueName, mess: ' added to the world ', world: valueHomeworld});
   }
 
   clearFormsPerson()
@@ -145,44 +153,53 @@ if( touchedBirthyear ) {
   event.preventDefault();
 };
 
-//favend
-//  useEffect(() => { 
-//  dispatch(actions.addToCharacters(favourites))
-//  console.log(favourites)
-//  }, [favourites]);
 
-
-const favouriteListAndForm = (
-    <div>
-        <h3>ADD PERSON</h3>
-        {/* {favouritesSections} */}
-        <form className="flexRowShow" onSubmit={handleSubmit}>
+const charactersForm = (
+  <div>
+    <form className="flexRowShow" onSubmit={handleSubmit} id="test">
     
-        <span>{nameValMess}</span>
-        <input type="text" className={cssClassName} value={valueName} placeholder="Input Name"
-        onChange={handleChangeFormName} onBlur={event => setTouchedName(true)} />
+      <span className="space-for-val">{nameValMess}</span>
+      <input type="text" className={cssClassName} value={valueName} placeholder="Input Name"
+      onChange={handleChangeFormName} onBlur={event => setTouchedName(true)} />
 
-        <span>{homeWorldValMess}</span>
-        <input type="text" className={cssClassHomeworld} value={valueHomeworld} placeholder="Input Homeworld"
-        onChange={handleChangeFormHomeworld} onBlur={event => setTouchedHomeWorld(true)} />
+      <span className="space-for-val">{homeWorldValMess}</span>
+      <select value={valueHomeworld} onChange={handleChangeFormHomeworld} onBlur={event => setTouchedHomeWorld(true)}
+      className={cssClassHomeworld}>
 
-        <span>{birthyearValMess}</span>
-        <input type="text" className={cssClassBirthyear} value={valueBirthyear} placeholder="Input Birthyear"
-        onChange={handleChangeFormBirthyear} onBlur={event => setTouchedBirthyear(true)} />
+        <option value="" disabled hidden>Please Choose...</option>
+        <option value={'Hufvudstaden'}>Hufvudstaden</option>
+        <option value={'Donsö'}>Donsö</option>
+        <option value={'Honö'}>Honö</option>
+        <option value={'Hisingen'}>Hisingen</option>
+        </select>
 
-    <button className="btn-add" disabled={btnDisable} type="submit">ADD PERSON</button>
+      <span className="space-for-val">{strengthValMess}</span>
+      <input type="text" id="s" className={cssClassStrength} value={valueStrength} placeholder="Input Strength"
+      onChange={handleChangeFormStrength} onBlur={event => setTouchedStrength(true)} />
+        
+      <button className="btn-add" disabled={btnDisable} type="submit">ADD PERSON</button>
     </form>
-    <h3 className="line-over">FAVOURITELIST PERSONS</h3>
-    {/* <div className="persons">{favouriteList}</div> */}
-    </div>
-) 
-
-return (
-<div>
-    {favouriteListAndForm}
-</div>
+  </div>
 )
 
+return (
+<div id="myModal" className="add-popup">
+  <div className="add-popup-content">
+    <div className="add-popup-header">
+      <span className="close" onClick={() => setShowAddChild(false)}>&times;</span>
+      <h2>L<span className="font-add">Ä</span>gg till karakt<span className="font-add">Ä</span>r</h2>
+    </div>
+      <div className="add-popup-body">
+        {charactersForm}
+      </div>
+        <div className="add-popup-footer">
+          <span className="span-col-ora">{character.name}</span>
+          {character.mess}
+          <span className="span-col-ora">{character.world}</span>
+        </div>
+    </div>
+  </div>
+)
 }
 
 export default AddCharacter;
