@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { useDispatch } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux';
 import { actions } from '../features/characters'
+import { actions as actionsIdAdder} from '../features/idAdder'
 import '../form.css';
 import '../popup.css';
 
@@ -8,6 +9,10 @@ import '../popup.css';
 
 const AddCharacter = ({setShowAddChild}) => {
 const dispatch = useDispatch();
+const idToBeAdded = useSelector(state => state.idAdder)
+
+
+
 //--------------------------------------------------------Persons
 const [valueName, setValueName] = useState([]);
 const [valueHomeworld, setValueHomeworld] = useState('');
@@ -180,9 +185,10 @@ if( touchedStrength ) {
   }
 
   const handleSubmit = event => {
-  if (valueName && valueHomeworld && valueBackstory && valueIntelligence && valueStrength) {
+  if (valueName && valueHomeworld && valueBackstory && valueIntelligence && valueStrength && idToBeAdded) {
+    dispatch(actionsIdAdder.increase())
     dispatch(actions.addToCharacters({
-    name: valueName, world: valueHomeworld,
+    id: idToBeAdded, name: valueName, world: valueHomeworld,
     backstory: valueBackstory, strength: valueStrength, intelligence: valueIntelligence 
   }))
     setCharacter({name: valueName, mess: ' added to the world ', world: valueHomeworld});
@@ -192,6 +198,7 @@ if( touchedStrength ) {
 
   event.preventDefault();
 };
+
 
 
 const charactersForm = (

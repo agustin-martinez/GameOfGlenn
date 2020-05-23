@@ -1,10 +1,12 @@
 import { combineReducers } from 'redux';
-import { reducer as worldsReducer } from './worlds';
+import { reducer as idAdderReducer } from './idAdder';
 import { reducer as charactersReducer } from './characters';
+import { reducer as editCharacterReducer } from './editCharacter';
 
 const rootReducer = combineReducers({
-    worlds: worldsReducer,
-    characters: charactersReducer 
+    idAdder: idAdderReducer,
+    characters: charactersReducer,
+    editCharacter: editCharacterReducer
 })
 
 export { rootReducer };

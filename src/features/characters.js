@@ -11,10 +11,10 @@ const decreaseStrength = createAction('decrease Strenth')
 const actions = { addToCharacters, removeCharacter, editCharacter, increaseStrength, decreaseStrength };
 
 const initialState = [
-     { character: {name: 'Ragnhild', world: 'Hufvudstaden', backstory: 'fdffd', strength: 6, intelligence: 5 }},
-     { character: {name: 'd', world: 'Slottskogen'}, count: 1},
-     { character: {name: 's', world: 'Hisingen'}},
-     { character: {name: 'fe', world: 'Donsö'}}
+     { character: {id: 1, name: 'Ragnhild', world: 'Hufvudstaden', backstory: 'fdffd', strength: 6, intelligence: 5 }},
+     { character: {id: 2, name: 'd', world: 'Slottskogen'}},
+     { character: {id: 3, name: 's', world: 'Hisingen'}},
+     { character: {id: 4, name: 'fe', world: 'Donsö'}, count: 4}
 ]
 
 
@@ -30,6 +30,17 @@ const reducer = createReducer(initialState, {
     [removeCharacter]: (state, action) => (
         state.filter(cartItem => cartItem.character.name !== action.payload)
     ),
+
+    [editCharacter]: (state, action) => (
+    state.map((cartItem => {
+        if( cartItem.character.id !== action.payload ) {
+            return cartItem
+        } 
+            return {
+            ...cartItem,
+            ...action.cartItem
+        }
+    }) ))
 
 })
 

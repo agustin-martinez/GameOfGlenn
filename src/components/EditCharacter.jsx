@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { actions } from '../features/characters'
 import '../form.css';
 import '../popup.css';
@@ -8,18 +8,25 @@ import '../popup.css';
 
 const EditCharacter = ({setShowAddChild}) => {
 const dispatch = useDispatch();
-//--------------------------------------------------------Persons
-const [valueName, setValueName] = useState([]);
-const [valueHomeworld, setValueHomeworld] = useState('');
-const [valueStrength, setValueStrength] = useState([]);
-const [valueIntelligence, setValueIntelligence] = useState([]);
-const [valueBackstory, setValueBackstory] = useState([]);
-const [character, setCharacter] = useState({mess: 'Ingen karaktär inlagd ännu'})
+const editCharacter = useSelector(state => state.editCharacter)
+console.log(editCharacter)
+// useEffect(() => {
+//   console.log(editCharacter[0].character.name)
+// }, [editCharacter]);
 
-const [touchedStrength, setTouchedStrength] = useState(false);
-const [touchedIntelligence, setTouchedIntelligence] = useState(false);
-const [touchedHomeWorld, setTouchedHomeWorld] = useState(false);
-const [touchedName, setTouchedName] = useState(false);
+//--------------------------------------------------------Persons
+const [valueName, setValueName] = useState(editCharacter[0].character.name);
+const [valueHomeworld, setValueHomeworld] = useState(editCharacter[0].character.world);
+const [valueStrength, setValueStrength] = useState([editCharacter[0].character.strength]);
+const [valueIntelligence, setValueIntelligence] = useState(editCharacter[0].character.intelligence);
+const [valueBackstory, setValueBackstory] = useState([editCharacter[0].character.backstory]);
+const [valueId, setValueId] = useState([editCharacter[0].character.id]);
+const [character, setCharacter] = useState({mess: 'Karaktären har inte ändrats ännu'})
+
+const [touchedStrength, setTouchedStrength] = useState(true);
+const [touchedIntelligence, setTouchedIntelligence] = useState(true);
+const [touchedHomeWorld, setTouchedHomeWorld] = useState(true);
+const [touchedName, setTouchedName] = useState(true);
 
 //fav
 const handleChangeFormName = event => {
@@ -39,7 +46,6 @@ const handleChangeFormIntelligence = event => {
 };
 //-----------------------------------------------
 
-console.log(valueBackstory)
 //----------------------------------Validation Person
 
 let btnDisable = true;
@@ -181,8 +187,8 @@ if( touchedStrength ) {
 
   const handleSubmit = event => {
   if (valueName && valueHomeworld && valueBackstory && valueIntelligence && valueStrength) {
-    dispatch(actions.addToCharacters({
-    name: valueName, world: valueHomeworld,
+    dispatch(actions.editCharacter({
+    id: valueId, name: valueName, world: valueHomeworld,
     backstory: valueBackstory, strength: valueStrength, intelligence: valueIntelligence 
   }))
     setCharacter({name: valueName, mess: ' added to the world ', world: valueHomeworld});
@@ -192,7 +198,7 @@ if( touchedStrength ) {
 
   event.preventDefault();
 };
-
+console.log(valueId)
 
 const charactersForm = (
   <div>
