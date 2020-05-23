@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
-import Home from "./components/Home";
+import Start from "./components/Start";
 import HeaderRedux from "./components/HeaderRedux";
 import SearchBar from "./components/SearchBar";
 import Characters from "./components/Characters";
@@ -11,7 +11,7 @@ import Donso from "./components/Donso";
 import Hisingen from "./components/Hisingen";
 
 function App() {
-  const HOME = "Home",
+  const HOME = "Start",
     HUFVUDSTADEN = "Hufvudstaden",
     SLOTTSSKOGEN = "Slottsskogen",
     DONSO = "Donso",
@@ -24,7 +24,7 @@ function App() {
   let content = null;
   switch (currentScreen) {
     case HOME:
-      content = <Home />;
+      content = <Start />;
       break;
     case HUFVUDSTADEN:
       content = <Hufvudstaden />;
@@ -45,7 +45,7 @@ function App() {
       content = <About />;
       break;
     default:
-      content = <Home />;
+      content = <Start />;
   }
 
   return (
