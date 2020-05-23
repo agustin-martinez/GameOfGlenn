@@ -240,7 +240,7 @@ return (
   <div className="add-popup-content">
     <div className="add-popup-header">
       <span className="close" onClick={() => setShowAddChild(false)}>&times;</span>
-      <h2>L<span className="font-add">Ä</span>gg till karakt<span className="font-add">Ä</span>r</h2>
+      <h2><span className="font-add">Ä</span>ndra karakt<span className="font-add">Ä</span>r</h2>
     </div>
       <div className="add-popup-body">
         {charactersForm}

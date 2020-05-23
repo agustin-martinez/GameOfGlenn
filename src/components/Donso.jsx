@@ -1,15 +1,24 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 
 const Donso = () => {
     const charactersData = useSelector(state => state.characters)
+	const [fromDonso, setFromDonso] = useState([])
 
+    useEffect(() => {
+        const results = charactersData.filter(item =>
+        item.character.world.includes('Donsö')
+        );
+        setFromDonso(results);
+    }, [charactersData]);
 
-    const outputCharacters = charactersData.map(charItem => (
+    const outputCharacters = fromDonso.map(charItem => (
         <div className="Characters" key={charItem.character.name}>
             <div> NAME: {charItem.character.name} </div>
             <div> WORLD {charItem.character.world} </div>
-            <div> STRENGHT: {charItem.strength} </div>
+            <div> INTELLIGENCE: {charItem.character.intelligence} </div>
+            <div> STRENGHT: {charItem.character.strength} </div>
+            <div> BACKSTORY: {charItem.character.backstory} </div>
             {/* <button  onClick={() => deleteCharacter(charactersItem)}>Delete</button> */}
         </div>
     ))
@@ -31,6 +40,7 @@ const Donso = () => {
 				Karaktärer som är här
 				</h2>
 				<div>
+				{outputCharacters}
 				</div>
 			</div>
         </div>

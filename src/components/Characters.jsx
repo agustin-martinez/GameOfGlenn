@@ -22,17 +22,18 @@ const Characters = () => {
     if( showEdit ) {
         maybeEdit = <EditCharacter setShowAddChild={setShowEdit}/> ;
     }
+    
 
     
 const SearchBar = (
-  <div  className='SearchBar' style={{ marginBottom: '30px' }}>
+    <div  className='SearchBar' style={{ marginBottom: '30px' }}>
     <input
-      type='text'
-      placeholder='Sök efter karaktärer ...'
-      name='sök karktärer'
-      ></input>
+        type='text'
+        placeholder='Sök efter karaktärer ...'
+        name='sök karktärer'
+        ></input>
     </div>
-  )
+    )
 
     const outputCharacters = charactersData.map(charItem => (
         <div className="planets-item" key={charItem.character.name}>
@@ -42,7 +43,7 @@ const SearchBar = (
             <div> STRENGHT: {charItem.character.strength} </div>
             <div> BACKSTORY: {charItem.character.backstory} </div>
             <button  onClick={() => dispatch(actions.removeCharacter(charItem.character.name))}>Ta bort</button>
-            <button onClick={() => setShowAdd(!showAdd)}>Edit Character</button>
+            <button onClick={() => setShowEdit(!showEdit)}>Edit Character</button>
         </div>
     ))
     return (
