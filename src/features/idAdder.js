@@ -4,7 +4,7 @@ const increase = createAction('increase')
 
 const actions = { increase };
 
-const initialState = 4 ;
+const initialState = 5 ;
 
 const reducer = createReducer(initialState, {
     [increase]: (state, action) => state + 1,

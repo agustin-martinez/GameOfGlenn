@@ -50,7 +50,7 @@ const SearchBar = (
             <div> INTELLIGENCE: {charItem.character.intelligence} </div>
             <div> STRENGHT: {charItem.character.strength} </div>
             <div> BACKSTORY: {charItem.character.backstory} </div>
-            <div> BACKSTORY: {charItem.character.id} </div>
+            <div> ID: {charItem.character.id} </div>
             <button  onClick={() => dispatch(actions.removeCharacter(charItem.character.name))}>Ta bort</button>
             <button onClick={() => handleEdit(charItem)}>Edit Character</button>
         </div>

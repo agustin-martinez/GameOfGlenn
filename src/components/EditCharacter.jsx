@@ -178,6 +178,7 @@ if( touchedStrength ) {
     setValueHomeworld('');
     setValueIntelligence('');
     setValueStrength('');
+    setValueBackstory('')
     
     setTouchedHomeWorld(false);
     setTouchedName(false);
@@ -186,7 +187,7 @@ if( touchedStrength ) {
   }
 
   const handleSubmit = event => {
-  if (valueName && valueHomeworld && valueBackstory && valueIntelligence && valueStrength) {
+  if (valueName && valueHomeworld && valueBackstory && valueIntelligence && valueStrength && valueId) {
     dispatch(actions.editCharacter({
     id: valueId, name: valueName, world: valueHomeworld,
     backstory: valueBackstory, strength: valueStrength, intelligence: valueIntelligence 
@@ -198,7 +199,6 @@ if( touchedStrength ) {
 
   event.preventDefault();
 };
-console.log(valueId)
 
 const charactersForm = (
   <div>

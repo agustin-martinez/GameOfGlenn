@@ -177,6 +177,7 @@ if( touchedStrength ) {
     setValueHomeworld('');
     setValueIntelligence('');
     setValueStrength('');
+    setValueBackstory('')
     
     setTouchedHomeWorld(false);
     setTouchedName(false);

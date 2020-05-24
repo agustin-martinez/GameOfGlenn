@@ -11,10 +11,10 @@ const decreaseStrength = createAction('decrease Strenth')
 const actions = { addToCharacters, removeCharacter, editCharacter, increaseStrength, decreaseStrength };
 
 const initialState = [
-     { character: {id: 1, name: 'Ragnhild', world: 'Hufvudstaden', backstory: 'fdffd', strength: 6, intelligence: 5 }},
-     { character: {id: 2, name: 'd', world: 'Slottskogen'}},
-     { character: {id: 3, name: 's', world: 'Hisingen'}},
-     { character: {id: 4, name: 'fe', world: 'Donsö'}, count: 4}
+    { character: {id: 1, name: 'Ragnhild', world: 'Hufvudstaden', backstory: 'fdffd', strength: 6, intelligence: 5 }},
+    { character: {id: 2, name: 'Bo', world: 'Slottskogen', backstory: 'dsd', strength: 4, intelligence: 4 }},
+    { character: {id: 3, name: 'Lars', world: 'Donsö', backstory: 'vds', strength: 3, intelligence: 6 }},
+    { character: {id: 4, name: 'Karl', world: 'Hisingen', backstory: 'fdffd', strength: 5, intelligence: 7 }}
 ]
 
 
@@ -31,17 +31,21 @@ const reducer = createReducer(initialState, {
         state.filter(cartItem => cartItem.character.name !== action.payload)
     ),
 
-    [editCharacter]: (state, action) => (
-    state.map((cartItem => {
-        if( cartItem.character.id !== action.payload ) {
-            return cartItem
-        } 
-            return {
-            ...cartItem,
-            ...action.cartItem
-        }
-    }) ))
+    [editCharacter]: (state, action) => {
+            return state.map((item, index) => {
+            // Hitta item med matchande id
+            if(item.character.id === action.payload.character.id) {
+              // Return a new object Returnera ett nytt
+              return {
+                character: action.payload  // replace the email addr
+              }
+            }
+            // Leave every other item unchanged
+            return item;
+          });
+        },
 
+    
 })
 
 
