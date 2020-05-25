@@ -1,30 +1,32 @@
-import React, { useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import React, { useState} from 'react';
+import { useDispatch, useSelector } from 'react-redux'
 import { actions } from '../features/characters'
-import { actions as actionsIdAdder} from '../features/idAdder'
 import '../form.css';
 import '../popup.css';
 
 
 
-const AddCharacter = ({setShowAddChild}) => {
+const EditCharacter = ({setShowAddChild}) => {
 const dispatch = useDispatch();
-const idToBeAdded = useSelector(state => state.idAdder)
-
-
+const editCharacter = useSelector(state => state.editCharacter)
+console.log(editCharacter)
+// useEffect(() => {
+//   console.log(editCharacter[0].character.name)
+// }, [editCharacter]);
 
 //--------------------------------------------------------Persons
-const [valueName, setValueName] = useState([]);
-const [valueHomeworld, setValueHomeworld] = useState('');
-const [valueStrength, setValueStrength] = useState([]);
-const [valueIntelligence, setValueIntelligence] = useState([]);
-const [valueBackstory, setValueBackstory] = useState([]);
-const [character, setCharacter] = useState({mess: 'Ingen karaktär inlagd ännu'})
+const [valueName, setValueName] = useState(editCharacter[0].name);
+const [valueHomeworld, setValueHomeworld] = useState(editCharacter[0].world);
+const [valueStrength, setValueStrength] = useState([editCharacter[0].strength]);
+const [valueIntelligence, setValueIntelligence] = useState(editCharacter[0].intelligence);
+const [valueBackstory, setValueBackstory] = useState([editCharacter[0].backstory]);
+const valueId = editCharacter[0].id
+const [character, setCharacter] = useState({mess: 'Karaktären har inte ändrats ännu'})
 
-const [touchedStrength, setTouchedStrength] = useState(false);
-const [touchedIntelligence, setTouchedIntelligence] = useState(false);
-const [touchedHomeWorld, setTouchedHomeWorld] = useState(false);
-const [touchedName, setTouchedName] = useState(false);
+const [touchedStrength, setTouchedStrength] = useState(true);
+const [touchedIntelligence, setTouchedIntelligence] = useState(true);
+const [touchedHomeWorld, setTouchedHomeWorld] = useState(true);
+const [touchedName, setTouchedName] = useState(true);
 
 //fav
 const handleChangeFormName = event => {
@@ -42,9 +44,10 @@ const handleChangeFormStrength = event => {
 const handleChangeFormIntelligence = event => {
   setValueIntelligence(event.target.value);
 };
+
+
 //-----------------------------------------------
 
-console.log(valueBackstory)
 //----------------------------------Validation Person
 
 let btnDisable = true;
@@ -186,26 +189,26 @@ if( touchedStrength ) {
   }
 
   const handleSubmit = event => {
-  if (valueName && valueHomeworld && valueBackstory && valueIntelligence && valueStrength && idToBeAdded) {
-    dispatch(actionsIdAdder.increase())
-    dispatch(actions.addToCharacters({
-    id: idToBeAdded, name: valueName, world: valueHomeworld,
+  if (valueName && valueHomeworld && valueBackstory && valueIntelligence && valueStrength && valueId) {
+    dispatch(actions.editCharacter({
+    id: valueId, name: valueName, world: valueHomeworld,
     backstory: valueBackstory, strength: valueStrength, intelligence: valueIntelligence 
   }))
-    setCharacter({name: valueName, mess: ' added to the world ', world: valueHomeworld});
+  let today = new Date();
+  let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+      setCharacter({name: valueName, mess: ' uppdaterades klockan: ' + time});
+    
   }
 
-  clearFormsPerson()
+  // clearFormsPerson()
 
   event.preventDefault();
 };
 
-
-
 const charactersForm = (
   <div>
     <form className="flexRowShow" onSubmit={handleSubmit} id="test">
-    
+          
       <span className="space-for-val">{nameValMess}</span>
       <input type="text" className={cssClassName} value={valueName} placeholder="Namn"
       onChange={handleChangeFormName} onBlur={event => setTouchedName(true)} />
@@ -237,18 +240,18 @@ const charactersForm = (
       <input type="range" min="1" max="10" value={valueStrength} className="slider"
       onChange={handleChangeFormStrength}/>
 
-        
+
       <button className="btn-add" disabled={btnDisable} type="submit">Lägg till karaktär</button>
     </form>
   </div>
 )
 
 return (
-<div className="add-popup">
+<div id="myModal" className="add-popup">
   <div className="add-popup-content">
     <div className="add-popup-header">
       <span className="close" onClick={() => setShowAddChild(false)}>&times;</span>
-      <h2>L<span className="font-add">Ä</span>gg till karakt<span className="font-add">Ä</span>r</h2>
+      <h2><span className="font-add">Ä</span>ndra karakt<span className="font-add">Ä</span>r</h2>
     </div>
       <div className="add-popup-body">
         {charactersForm}
@@ -256,11 +259,11 @@ return (
         <div className="add-popup-footer">
           <span className="span-col-ora">{character.name}</span>
           {character.mess}
-          <span className="span-col-ora">{character.world}</span>
+          <span className="span-col-ora">{character.newName}</span>
         </div>
     </div>
   </div>
 )
 }
 
-export default AddCharacter;
+export default EditCharacter;

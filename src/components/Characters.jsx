@@ -1,33 +1,47 @@
 import React, { useState } from 'react';
-import AddCharacter from './AddCharacter';
-import SearchBar from './SearchBar';
+import AddCharacter from '../components/AddCharacter';
+import EditCharacter from '../components/EditCharacter';
+import SearchBar from '../components/SearchBar';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { actions } from '../features/characters';
+import { actions as actionsEdit } from '../features/editCharacter';
 import '../popup.css';
 
 const Characters = () => {
   const dispatch = useDispatch();
   const charactersData = useSelector((state) => state.characters);
   const [showAdd, setShowAdd] = useState(false);
+  const [showEdit, setShowEdit] = useState(false);
 
   let maybeAdd = null;
   if (showAdd) {
     maybeAdd = <AddCharacter setShowAddChild={setShowAdd} />;
   }
 
+  let maybeEdit = null;
+  if (showEdit) {
+    maybeEdit = <EditCharacter setShowAddChild={setShowEdit} />;
+  }
+
+  const handleEdit = (char) => {
+    dispatch(actionsEdit.addToEditForm(char));
+
+    setShowEdit(!showEdit);
+  };
+
   const outputCharacters = charactersData.map((charItem) => (
-    <div className='planets-item' key={charItem.character.name}>
-      <div> NAME: {charItem.character.name} </div>
-      <div> WORLD {charItem.character.world} </div>
+    <div className='planets-item' key={charItem.name}>
+      <div> NAME: {charItem.name} </div>
+      <div> WORLD {charItem.world} </div>
+      <div> INTELLIGENCE: {charItem.intelligence} </div>
       <div> STRENGHT: {charItem.strength} </div>
-      <button
-        onClick={() =>
-          dispatch(actions.removeCharacter(charItem.character.name))
-        }
-      >
+      <div> BACKSTORY: {charItem.backstory} </div>
+      <div> ID: {charItem.id} </div>
+      <button onClick={() => dispatch(actions.removeCharacter(charItem.name))}>
         Ta bort
       </button>
+      <button onClick={() => handleEdit(charItem)}>Edit Character</button>
     </div>
   ));
   return (
@@ -38,6 +52,7 @@ const Characters = () => {
       </div>
       <button onClick={() => setShowAdd(!showAdd)}>Toggle</button>
       {maybeAdd}
+      {maybeEdit}
     </div>
   );
 };

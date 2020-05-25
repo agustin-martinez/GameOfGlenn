@@ -1,15 +1,25 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 
 const Hisingen = () => {
     const charactersData = useSelector(state => state.characters)
+	const [fromHisingen, setFromHisingen] = useState([])
 
+    useEffect(() => {
+        const results = charactersData.filter(item =>
+        item.world.includes('Hisingen')
+        );
+        setFromHisingen(results);
+    }, [charactersData]);
 
-    const outputCharacters = charactersData.map(charItem => (
-        <div className="Characters" key={charItem.character.name}>
-            <div> NAME: {charItem.character.name} </div>
-            <div> WORLD {charItem.character.world} </div>
+    const outputCharacters = fromHisingen.map(charItem => (
+        <div className="Characters" key={charItem.name}>
+            <div> NAME: {charItem.name} </div>
+            <div> WORLD {charItem.world} </div>
+            <div> INTELLIGENCE: {charItem.intelligence} </div>
             <div> STRENGHT: {charItem.strength} </div>
+            <div> BACKSTORY: {charItem.backstory} </div>
+            <div> ID: {charItem.id} </div>
             {/* <button  onClick={() => deleteCharacter(charactersItem)}>Delete</button> */}
         </div>
     ))
@@ -31,6 +41,7 @@ const Hisingen = () => {
 			Karaktärer som är här
 			</h2>
 			<div>
+			{outputCharacters}
 			</div>
 		</div>
         </div>

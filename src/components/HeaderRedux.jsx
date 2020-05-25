@@ -4,10 +4,9 @@ const HeaderRedux = ({setScreenFromHeader}) => {
 
     return(
         <div className="header">
-            <img src="logo.svg" alt="GAME OF GLENN"></img>
-        
+            <img onClick={() => setScreenFromHeader('Home')} src="logo.svg" alt="GAME OF GLENN"></img>
+
         <ul>
-            <li onClick={() => setScreenFromHeader('Home')}>HEM</li>
             <li className="dropdown">
                 <div className="dropbtn">VÄRLDAR</div>
                 <div className="dropdown-content">
@@ -17,12 +16,12 @@ const HeaderRedux = ({setScreenFromHeader}) => {
                 <div onClick={() => setScreenFromHeader('Hisingen')} >HISINGEN</div>
                 </div>
             </li>
-            <li><div onClick={() => setScreenFromHeader('Characters')} >KARAKTÄRER</div></li>
-            <li><div onClick={() => setScreenFromHeader('About')} >OM GOG</div></li>
+            <li><div className="dropbtn" onClick={() => setScreenFromHeader('Characters')} >KARAKTÄRER</div></li>
+            <li><div className="dropbtn" onClick={() => setScreenFromHeader('About')} >OM GOG</div></li>
 
         </ul>
 
-        
+
 
 
 

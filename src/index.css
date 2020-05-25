@@ -6,7 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: white;
-  
+
 }
 html {
   min-height: 100%;
@@ -21,7 +21,7 @@ main{
   display: flex;
   justify-content: center;
   border: 1px solid white;
- 
+
 }
 
 .border {
@@ -56,14 +56,14 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color:  #2B4045;;
+  background-color:  #2B4045;
   border: 2.5px solid #ECAE59;
   border-left:0px;
   border-right:0px;
 
-  
-  
-  
+
+
+
 }
 
 li {
@@ -79,7 +79,8 @@ li a, .dropbtn {
 }
 
 li a:hover, .dropdown:hover .dropbtn {
-  background: linear-gradient(179.89deg, #374C4F 0.99%, #5D767B 133.08%);;
+  /*background: linear-gradient(179.89deg, #374C4F 0.99%, #5D767B 133.08%);;*/
+  color:#FFDEB2;
 }
 
 li.dropdown {

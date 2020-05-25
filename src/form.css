@@ -14,7 +14,16 @@
 
 form > select {
     display: block;
-    width: 100%;
+    width: 101%;
+    outline: 0;
+    background: #eee;
+    padding: 15px 20px 15px 0px;
+    border: 3px solid #eee;
+}
+
+form > textarea {
+    display: block;
+    width: 95%;
     outline: 0;
     background: #eee;
     padding: 15px 20px 15px 0px;
@@ -40,7 +49,7 @@ form {
 
 form > button {
     display: block;
-    width: 100%;
+    width: 101%;
     margin: 20px 0;
     background: rgb(64, 128, 101);
     color: white;
@@ -64,3 +73,34 @@ form input:focus {
     height: 1.2em;
     margin-top: 3px;
 }
+
+
+
+form input[type="range"] { 
+    padding: 0;
+    -webkit-appearance: none;
+    border: 0px;
+    overflow: hidden;
+    height: 12px;
+    width: 101%;
+    cursor: pointer;
+    border-radius: 0; /* iOS */
+    outline: none; /* Remove outline */
+}
+
+
+form input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 28px;
+    border: 0px;
+    width: 15px;
+    background:  rgb(241, 241, 241);
+    border: 7px solid rgb(69, 119, 98);
+    
+     -webkit-appearance: none;
+    box-shadow: -100vw 0 0 100vw rgb(233, 208, 176);
+    outline: none; /* Remove outline */
+}
+
+
