@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
 import { useDispatch, useSelector } from 'react-redux'
 import { actions } from '../features/characters'
 import '../form.css';
@@ -15,12 +15,12 @@ console.log(editCharacter)
 // }, [editCharacter]);
 
 //--------------------------------------------------------Persons
-const [valueName, setValueName] = useState(editCharacter[0].character.name);
-const [valueHomeworld, setValueHomeworld] = useState(editCharacter[0].character.world);
-const [valueStrength, setValueStrength] = useState([editCharacter[0].character.strength]);
-const [valueIntelligence, setValueIntelligence] = useState(editCharacter[0].character.intelligence);
-const [valueBackstory, setValueBackstory] = useState([editCharacter[0].character.backstory]);
-const [valueId, setValueId] = useState([editCharacter[0].character.id]);
+const [valueName, setValueName] = useState(editCharacter[0].name);
+const [valueHomeworld, setValueHomeworld] = useState(editCharacter[0].world);
+const [valueStrength, setValueStrength] = useState([editCharacter[0].strength]);
+const [valueIntelligence, setValueIntelligence] = useState(editCharacter[0].intelligence);
+const [valueBackstory, setValueBackstory] = useState([editCharacter[0].backstory]);
+const valueId = editCharacter[0].id
 const [character, setCharacter] = useState({mess: 'Karaktären har inte ändrats ännu'})
 
 const [touchedStrength, setTouchedStrength] = useState(true);
@@ -44,6 +44,8 @@ const handleChangeFormStrength = event => {
 const handleChangeFormIntelligence = event => {
   setValueIntelligence(event.target.value);
 };
+
+
 //-----------------------------------------------
 
 //----------------------------------Validation Person
@@ -192,10 +194,13 @@ if( touchedStrength ) {
     id: valueId, name: valueName, world: valueHomeworld,
     backstory: valueBackstory, strength: valueStrength, intelligence: valueIntelligence 
   }))
-    setCharacter({name: valueName, mess: ' added to the world ', world: valueHomeworld});
+  let today = new Date();
+  let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+      setCharacter({name: valueName, mess: ' uppdaterades klockan: ' + time});
+    
   }
 
-  clearFormsPerson()
+  // clearFormsPerson()
 
   event.preventDefault();
 };
@@ -203,7 +208,7 @@ if( touchedStrength ) {
 const charactersForm = (
   <div>
     <form className="flexRowShow" onSubmit={handleSubmit} id="test">
-    
+          
       <span className="space-for-val">{nameValMess}</span>
       <input type="text" className={cssClassName} value={valueName} placeholder="Namn"
       onChange={handleChangeFormName} onBlur={event => setTouchedName(true)} />
@@ -235,7 +240,7 @@ const charactersForm = (
       <input type="range" min="1" max="10" value={valueStrength} className="slider"
       onChange={handleChangeFormStrength}/>
 
-        
+
       <button className="btn-add" disabled={btnDisable} type="submit">Lägg till karaktär</button>
     </form>
   </div>
@@ -254,7 +259,7 @@ return (
         <div className="add-popup-footer">
           <span className="span-col-ora">{character.name}</span>
           {character.mess}
-          <span className="span-col-ora">{character.world}</span>
+          <span className="span-col-ora">{character.newName}</span>
         </div>
     </div>
   </div>

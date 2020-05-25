@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { actions } from '../features/characters'
 import { actions as actionsIdAdder} from '../features/idAdder'
@@ -244,7 +244,7 @@ const charactersForm = (
 )
 
 return (
-<div id="myModal" className="add-popup">
+<div className="add-popup">
   <div className="add-popup-content">
     <div className="add-popup-header">
       <span className="close" onClick={() => setShowAddChild(false)}>&times;</span>

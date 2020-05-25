@@ -74,26 +74,33 @@ form input:focus {
     margin-top: 3px;
 }
 
-.slider {
+
+
+form input[type="range"] { 
     padding: 0;
-    width: 100%; /* Full-width */
-    height: 0px; /* Specified height */
+    -webkit-appearance: none;
+    border: 0px;
+    overflow: hidden;
+    height: 12px;
+    width: 101%;
+    cursor: pointer;
+    border-radius: 0; /* iOS */
     outline: none; /* Remove outline */
 }
 
-input[type=range]{
-    -webkit-appearance: none;
-}
 
-
-input[type=range]::-webkit-slider-thumb {
+form input[type=range]::-webkit-slider-thumb {
     -webkit-appearance: none;
     border: none;
     height: 28px;
-    width: 7px;
-    margin-top: -9px;
-    background:  #ECAE59;
-    border-top: 3px solid #2B4045;
+    border: 0px;
+    width: 15px;
+    background:  rgb(241, 241, 241);
+    border: 7px solid rgb(69, 119, 98);
+    
+     -webkit-appearance: none;
+    box-shadow: -100vw 0 0 100vw rgb(233, 208, 176);
+    outline: none; /* Remove outline */
 }
 
 

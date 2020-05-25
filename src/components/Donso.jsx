@@ -7,18 +7,19 @@ const Donso = () => {
 
     useEffect(() => {
         const results = charactersData.filter(item =>
-        item.character.world.includes('Donsö')
+        item.world.includes('Donsö')
         );
         setFromDonso(results);
     }, [charactersData]);
 
     const outputCharacters = fromDonso.map(charItem => (
-        <div className="Characters" key={charItem.character.name}>
-            <div> NAME: {charItem.character.name} </div>
-            <div> WORLD {charItem.character.world} </div>
-            <div> INTELLIGENCE: {charItem.character.intelligence} </div>
-            <div> STRENGHT: {charItem.character.strength} </div>
-            <div> BACKSTORY: {charItem.character.backstory} </div>
+        <div className="Characters" key={charItem.name}>
+            <div> NAME: {charItem.name} </div>
+            <div> WORLD {charItem.world} </div>
+            <div> INTELLIGENCE: {charItem.intelligence} </div>
+            <div> STRENGHT: {charItem.strength} </div>
+            <div> BACKSTORY: {charItem.backstory} </div>
+            <div> ID: {charItem.id} </div>
             {/* <button  onClick={() => deleteCharacter(charactersItem)}>Delete</button> */}
         </div>
     ))

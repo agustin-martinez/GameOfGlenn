@@ -11,10 +11,10 @@ const decreaseStrength = createAction('decrease Strenth')
 const actions = { addToCharacters, removeCharacter, editCharacter, increaseStrength, decreaseStrength };
 
 const initialState = [
-    { character: {id: 1, name: 'Ragnhild', world: 'Hufvudstaden', backstory: 'fdffd', strength: 6, intelligence: 5 }},
-    { character: {id: 2, name: 'Bo', world: 'Slottskogen', backstory: 'dsd', strength: 4, intelligence: 4 }},
-    { character: {id: 3, name: 'Lars', world: 'Donsö', backstory: 'vds', strength: 3, intelligence: 6 }},
-    { character: {id: 4, name: 'Karl', world: 'Hisingen', backstory: 'fdffd', strength: 5, intelligence: 7 }}
+    {id: 1, name: 'Ragnhild', world: 'Hufvudstaden', backstory: 'fdffd', strength: 6, intelligence: 5 },
+    {id: 2, name: 'Bo', world: 'Slottskogen', backstory: 'dsd', strength: 4, intelligence: 4 },
+    {id: 3, name: 'Lars', world: 'Donsö', backstory: 'vds', strength: 3, intelligence: 6 },
+    {id: 4, name: 'Karl', world: 'Hisingen', backstory: 'fdffd', strength: 5, intelligence: 7 }
 ]
 
 
@@ -22,33 +22,40 @@ const reducer = createReducer(initialState, {
     [addToCharacters]: (state, action) => {
             return [
                 ...state,
-                { character: action.payload}
+                action.payload
             ];
         
     },  // addToCart
 
     [removeCharacter]: (state, action) => (
-        state.filter(cartItem => cartItem.character.name !== action.payload)
+        state.filter(cartItem => cartItem.name !== action.payload)
     ),
 
-    [editCharacter]: (state, action) => {
-            return state.map((item, index) => {
-            // Hitta item med matchande id
-            if(item.character.id === action.payload.character.id) {
-              // Return a new object Returnera ett nytt
-              return {
-                character: action.payload  // replace the email addr
-              }
-            }
-            // Leave every other item unchanged
-            return item;
-          });
-        },
+    [editCharacter]: (state, action) => state.map((character, index) => {
+      if( character.id === action.payload.id ) {
+          return action.payload;
+      } else {
+          return character
+      }
+      // Alternativ: return (character.id === action.payload.id) ? action.payload : character
+  })
 
     
 })
 
-
+// [editCharacter]: (state, action) => {
+//   return state.map((item, index) => {
+//   // Hitta item med matchande id
+//   if(item.character.id === action.payload.character.id) {
+//     // Return a new object Returnera ett nytt
+//     return {
+//       character: action.payload  // replace the email addr
+//     }
+//   }
+//   // Leave every other item unchanged
+//   return item;
+// });
+// },
 
 // function alreadyAdded () {
     
