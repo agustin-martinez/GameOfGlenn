@@ -65,7 +65,7 @@ const isValidLength = l => {
 
 const isValidNumber = x => {
   let maybeNumber = Number(x);
-    if (x.length < 1 || x.length > 3) 
+    if (x < 1 || x > 10) 
     return false;
     return !isNaN(maybeNumber)
 }
@@ -164,7 +164,7 @@ if( touchedIntelligence ) {
   if( isValidNumber(valueIntelligence) )
     intelligenceValMess = ''
   else
-    intelligenceValMess = 'Vänligen, ange ditt värde i siffror'
+    intelligenceValMess = 'Ange ett siffervärde mellan 1-10'
 }
 
 let strengthValMess = '';
@@ -172,7 +172,7 @@ if( touchedStrength ) {
   if( isValidNumber(valueStrength) )
     strengthValMess = ''
   else
-    strengthValMess = 'Vänligen, ange ditt värde i siffror'
+    strengthValMess = 'Ange ett siffervärde mellan 1-10'
 }
 
   function clearFormsPerson() {
@@ -209,11 +209,12 @@ const charactersForm = (
   <div>
     <form className="flexRowShow" onSubmit={handleSubmit} id="test">
           
-      <span className="space-for-val">{nameValMess}</span>
+      <span className="space-for-val">  <label>Namn</label>  <span>{nameValMess}</span>  </span>
+      
       <input type="text" className={cssClassName} value={valueName} placeholder="Namn"
       onChange={handleChangeFormName} onBlur={event => setTouchedName(true)} />
-
-      <span className="space-for-val">{homeWorldValMess}</span>
+    
+      <span className="space-for-val">  <label>Värld</label>  <span>{homeWorldValMess}</span>  </span>
       <select value={valueHomeworld} onChange={handleChangeFormHomeworld} onBlur={event => setTouchedHomeWorld(true)}
       className={cssClassHomeworld}>
 
@@ -224,24 +225,25 @@ const charactersForm = (
         <option value={'Hisingen'}>Hisingen</option>
       </select>
 
-      <span className="space-for-val">{strengthValMess}</span>
+      <span className="space-for-val">  <label>Backstory</label>  <span></span>  </span>
       <textarea value={valueBackstory} onChange={handleChangeFormBackstory}
       placeholder="Din karaktärs bakgrundsstory(Valfri)"></textarea>
 
-      <span className="space-for-val">{intelligenceValMess}</span>
-      <input type="text" maxLength="1" className={cssClassIntelligence} value={valueIntelligence} placeholder="Intelligens 1-10"
+      <span className="space-for-val">  <label>Intelligens</label>  <span>{intelligenceValMess}</span>  </span>
+      <input type="text" maxLength="2" className={cssClassIntelligence} value={valueIntelligence} placeholder="Intelligens 1-10"
       onChange={handleChangeFormIntelligence} onBlur={event => setTouchedIntelligence(true)} />
       <input type="range" min="1" max="10" value={valueIntelligence} className="slider"
       onChange={handleChangeFormIntelligence} onBlur={event => setTouchedIntelligence(true)}/>
 
-      <span className="space-for-val">{strengthValMess}</span>
-      <input type="text" maxLength="1" className={cssClassStrength} value={valueStrength} placeholder="Styrka 1-10"
+
+      <span className="space-for-val">  <label>Styrka</label>  <span>{strengthValMess}</span>  </span>
+      <input type="text" maxLength="2" className={cssClassStrength} value={valueStrength} placeholder="Styrka 1-10"
       onChange={handleChangeFormStrength} onBlur={event => setTouchedStrength(true)} />
       <input type="range" min="1" max="10" value={valueStrength} className="slider"
       onChange={handleChangeFormStrength}/>
 
 
-      <button className="btn-add" disabled={btnDisable} type="submit">Lägg till karaktär</button>
+      <button className="btn-add" disabled={btnDisable} type="submit">Ändra karaktär</button>
     </form>
   </div>
 )

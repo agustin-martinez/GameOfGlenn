@@ -62,7 +62,7 @@ const isValidLength = l => {
 
 const isValidNumber = x => {
   let maybeNumber = Number(x);
-    if (x.length < 1 || x.length > 3) 
+    if (x < 1 || x > 10) 
     return false;
     return !isNaN(maybeNumber)
 }
@@ -161,7 +161,7 @@ if( touchedIntelligence ) {
   if( isValidNumber(valueIntelligence) )
     intelligenceValMess = ''
   else
-    intelligenceValMess = 'Vänligen, ange ditt värde i siffror'
+    intelligenceValMess = 'Ange ett siffervärde mellan 1-10'
 }
 
 let strengthValMess = '';
@@ -169,7 +169,7 @@ if( touchedStrength ) {
   if( isValidNumber(valueStrength) )
     strengthValMess = ''
   else
-    strengthValMess = 'Vänligen, ange ditt värde i siffror'
+    strengthValMess = 'Ange ett siffervärde mellan 1-10'
 }
 
   function clearFormsPerson() {
@@ -226,13 +226,13 @@ const charactersForm = (
       placeholder="Din karaktärs bakgrundsstory(Valfri)"></textarea>
 
       <span className="space-for-val">{intelligenceValMess}</span>
-      <input type="text" maxLength="1" className={cssClassIntelligence} value={valueIntelligence} placeholder="Intelligens 1-10"
+      <input type="text" maxLength="2" className={cssClassIntelligence} value={valueIntelligence} placeholder="Intelligens 1-10"
       onChange={handleChangeFormIntelligence} onBlur={event => setTouchedIntelligence(true)} />
       <input type="range" min="1" max="10" value={valueIntelligence} className="slider"
       onChange={handleChangeFormIntelligence} onBlur={event => setTouchedIntelligence(true)}/>
 
       <span className="space-for-val">{strengthValMess}</span>
-      <input type="text" maxLength="1" className={cssClassStrength} value={valueStrength} placeholder="Styrka 1-10"
+      <input type="text" maxLength="2" className={cssClassStrength} value={valueStrength} placeholder="Styrka 1-10"
       onChange={handleChangeFormStrength} onBlur={event => setTouchedStrength(true)} />
       <input type="range" min="1" max="10" value={valueStrength} className="slider"
       onChange={handleChangeFormStrength}/>

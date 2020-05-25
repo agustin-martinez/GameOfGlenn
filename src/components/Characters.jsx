@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import AddCharacter from '../components/AddCharacter';
 import EditCharacter from '../components/EditCharacter';
 import { useSelector } from 'react-redux';
@@ -13,6 +13,26 @@ const Characters = () => {
     const charactersData = useSelector(state => state.characters)
     const [showAdd, setShowAdd] = useState(false);
     const [showEdit, setShowEdit] = useState(false);
+
+    //---------------
+    const [searchTerm, setSearchTerm] = useState('');
+    const [resultList, setResultList] = useState(charactersData);
+
+    useEffect(() => {
+        setResultList(charactersData);
+    }, [charactersData]);
+
+    const handleChange = (e) => {
+        console.log(charactersData);
+        setSearchTerm(e.target.value);
+        setResultList(
+          charactersData.filter((person) => 
+          person.name.toLowerCase().includes(e.target.value) ||
+          person.name.toUpperCase().includes(e.target.value)
+          )
+        );
+      };
+      //-------------------
     
     let maybeAdd = null;
     if( showAdd ) {
@@ -39,16 +59,18 @@ const SearchBar = (
         type='text'
         placeholder='Sök efter karaktärer ...'
         name='sök karktärer'
+        value={searchTerm}
+        onChange={handleChange}
         ></input>
     </div>
     )
 
-    const outputCharacters = charactersData.map(charItem => (
-        <div className="planets-item" key={charItem.name}>
-            <div> NAME: {charItem.name} </div>
-            <div> WORLD {charItem.world} </div>
-            <div> INTELLIGENCE: {charItem.intelligence} </div>
-            <div> STRENGHT: {charItem.strength} </div>
+    const outputCharacters = resultList.map(charItem => (
+        <div className="character-item" key={charItem.name}>
+            <div> NAMN: {charItem.name} </div>
+            <div> VÄRLD: {charItem.world} </div>
+            <div> INTELLIGENS: {charItem.intelligence} </div>
+            <div> STYRKA: {charItem.strength} </div>
             <div> BACKSTORY: {charItem.backstory} </div>
             <div> ID: {charItem.id} </div>
             <button  onClick={() => dispatch(actions.removeCharacter(charItem.name))}>Ta bort</button>
