@@ -1,18 +1,26 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
-
 
 const Slottsskogen = () => {
     const charactersData = useSelector(state => state.characters)
+    const [fromSlottskogen, setfromSlottskogen] = useState([])
+
+    useEffect(() => {
+        const results = charactersData.filter(item =>
+        item.world.includes('Slottskogen')
+        );
+        setfromSlottskogen(results);
+    }, [charactersData]);
 
 
-    const outputCharacters = charactersData.map(charItem => (
-        <div className="Characters" key={charItem.character.name}>
-            <div> NAME: {charItem.character.name} </div>
-            <div> WORLD {charItem.character.world} </div>
-            <div> INTELLIGENCE: {charItem.character.intelligence} </div>
-            <div> STRENGHT: {charItem.character.strength} </div>
-            <div> BACKSTORY: {charItem.character.backstory} </div>
+    const outputCharacters = fromSlottskogen.map(charItem => (
+        <div className="Characters" key={charItem.name}>
+            <div> NAMN: {charItem.name} </div>
+            <div> VÄRLD: {charItem.world} </div>
+            <div> INTELLIGENS: {charItem.intelligence} </div>
+            <div> STYRKA: {charItem.strength} </div>
+            <div> BACKSTORY: {charItem.backstory} </div>
+            <div> ID: {charItem.id} </div>
             {/* <button  onClick={() => deleteCharacter(charactersItem)}>Delete</button> */}
         </div>
     ))

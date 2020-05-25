@@ -1,15 +1,13 @@
 import { createAction, createReducer } from '@reduxjs/toolkit'
 
 const increase = createAction('increase') 
-const decrease = createAction('decrease')
 
-const actions = { increase, decrease };
+const actions = { increase };
 
-const initialState = 10;
+const initialState = 5 ;
 
 const reducer = createReducer(initialState, {
     [increase]: (state, action) => state + 1,
-    [decrease]: (state, action) => state -1
 })
 
 

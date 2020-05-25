@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./App.css";
 import Start from "./components/Start";
 import HeaderRedux from "./components/HeaderRedux";
-import SearchBar from "./components/SearchBar";
 import Characters from "./components/Characters";
 import About from "./components/About";
 import Hufvudstaden from "./components/Hufvudstaden";
