@@ -66,14 +66,16 @@ const SearchBar = (
     )
 
     const outputCharacters = resultList.map(charItem => (
-        <div className="character-item" key={charItem.name}>
+        <div className="character-item" key={charItem.id}>
             <div> NAMN: {charItem.name} </div>
             <div> VÄRLD: {charItem.world} </div>
-            <div> INTELLIGENS: {charItem.intelligence} </div>
-            <div> STYRKA: {charItem.strength} </div>
+            <div> INTELLIGENS</div>
+            <input readOnly type="range" max="10" value={charItem.intelligence}></input>
+            <div> STYRKA:  </div>
+            <input readOnly type="range" max="10" value={charItem.strength}></input>
             <div> BACKSTORY: {charItem.backstory} </div>
             <div> ID: {charItem.id} </div>
-            <button  onClick={() => dispatch(actions.removeCharacter(charItem.name))}>Ta bort</button>
+            <button  onClick={() => dispatch(actions.removeCharacter(charItem.id))}>Ta bort</button>
             <button onClick={() => handleEdit(charItem)}>Edit Character</button>
         </div>
     ))

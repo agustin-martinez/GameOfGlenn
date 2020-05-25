@@ -60,6 +60,13 @@ const isValidLength = l => {
     return true;
   }
 
+const isValidLengthBackstory = l => {
+  if  (l.length === 260) 
+  return false;
+  else 
+  return true;
+}
+
 const isValidNumber = x => {
   let maybeNumber = Number(x);
     if (x < 1 || x > 10) 
@@ -145,7 +152,7 @@ if( touchedName ) {
   if( isValidLength(valueName) )
   nameValMess = ''
   else
-  nameValMess = 'Fyll i minst två bokstäver, tack'
+  nameValMess = 'Fyll i minst 2 tecken och max 20, tack'
 }
 
 let homeWorldValMess = '';
@@ -170,6 +177,13 @@ if( touchedStrength ) {
     strengthValMess = ''
   else
     strengthValMess = 'Ange ett siffervärde mellan 1-10'
+}
+
+let backstoryValMess = '';
+  if( isValidLengthBackstory(valueBackstory) ) {
+  backstoryValMess = ''
+  } else {
+  backstoryValMess = 'Maxantalet tecken upnått (260 st)'
 }
 
   function clearFormsPerson() {
@@ -221,20 +235,20 @@ const charactersForm = (
         <option value={'Hisingen'}>Hisingen</option>
       </select>
 
-      <span className="space-for-val">{strengthValMess}</span>
-      <textarea value={valueBackstory} onChange={handleChangeFormBackstory}
-      placeholder="Din karaktärs bakgrundsstory(Valfri)"></textarea>
+      <span className="space-for-val">{backstoryValMess}</span>
+      <textarea value={valueBackstory} onChange={handleChangeFormBackstory} maxLength="260"
+      placeholder="(Valfri) Bakgrundsstory, max 260 Tecken"></textarea>
 
       <span className="space-for-val">{intelligenceValMess}</span>
-      <input type="text" maxLength="2" className={cssClassIntelligence} value={valueIntelligence} placeholder="Intelligens 1-10"
+      <input type="text" maxLength="2" className={cssClassIntelligence} value={valueIntelligence} placeholder="Intelligens 1-10, , skriv in eller använd slider"
       onChange={handleChangeFormIntelligence} onBlur={event => setTouchedIntelligence(true)} />
-      <input type="range" min="1" max="10" value={valueIntelligence} className="slider"
+      <input tabIndex="-1" type="range" min="1" max="10" value={valueIntelligence} className="slider"
       onChange={handleChangeFormIntelligence} onBlur={event => setTouchedIntelligence(true)}/>
 
       <span className="space-for-val">{strengthValMess}</span>
-      <input type="text" maxLength="2" className={cssClassStrength} value={valueStrength} placeholder="Styrka 1-10"
+      <input type="text" maxLength="2" className={cssClassStrength} value={valueStrength} placeholder="Styrka 1-10, , skriv in eller använd slider"
       onChange={handleChangeFormStrength} onBlur={event => setTouchedStrength(true)} />
-      <input type="range" min="1" max="10" value={valueStrength} className="slider"
+      <input tabIndex="-1" type="range" min="1" max="10" value={valueStrength} className="slider"
       onChange={handleChangeFormStrength}/>
 
         

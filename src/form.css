@@ -46,7 +46,6 @@ form {
     margin: 0 auto;
 }
 
-
 form > button {
     display: block;
     width: 101%;
@@ -78,8 +77,8 @@ form input[type="range"] {
     height: 12px;
     width: 101%;
     cursor: pointer;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
     outline: none; /* Remove outline */
 }
 
@@ -87,12 +86,11 @@ form input[type="range"] {
 form input[type=range]::-webkit-slider-thumb {
     -webkit-appearance: none;
     height: 12px;
-    width: 10px;
+    width: 9px;
     background:  rgb(221, 163, 36);
-    border: 2px solid rgb(0, 0, 0);
-    border-radius: 6px;
+    border: 4px solid rgb(0, 0, 0);
     -webkit-appearance: none;
-    box-shadow: -100vw 0 0 100vw rgb(233, 208, 176);
+    box-shadow: -100vw 0 0 100vw #ECAE59;
     outline: none; /* Remove outline */
 }
 
@@ -113,3 +111,26 @@ form > .space-for-val {
     justify-content: space-between;
 }
 
+input[type="range"] { 
+    -webkit-appearance: none;
+    position: relative;
+    overflow: hidden;
+    height: 20px;
+    width: 80%;
+    border-radius: 0; /* iOS */
+    outline: none;
+}
+
+::-webkit-slider-runnable-track {
+    background: #889395;
+}
+
+::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px; /* 1 */
+    height: 40px;
+    background: #ECAE59;
+    box-shadow: -100vw 0 0 100vw #ECAE59;
+    border: 2px solid #ECAE59; /* 1 */
+    outline: none; /* Remove outline */
+}

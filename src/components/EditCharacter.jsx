@@ -63,6 +63,13 @@ const isValidLength = l => {
     return true;
   }
 
+const isValidLengthBackstory = l => {
+  if  (l.length === 260) 
+  return false;
+  else 
+  return true;
+}
+
 const isValidNumber = x => {
   let maybeNumber = Number(x);
     if (x < 1 || x > 10) 
@@ -148,7 +155,7 @@ if( touchedName ) {
   if( isValidLength(valueName) )
   nameValMess = ''
   else
-  nameValMess = 'Fyll i minst två bokstäver, tack'
+  nameValMess = 'Fyll i minst 2 tecken och max 20, tack'
 }
 
 let homeWorldValMess = '';
@@ -175,18 +182,25 @@ if( touchedStrength ) {
     strengthValMess = 'Ange ett siffervärde mellan 1-10'
 }
 
-  function clearFormsPerson() {
-    setValueName('');
-    setValueHomeworld('');
-    setValueIntelligence('');
-    setValueStrength('');
-    setValueBackstory('')
+let backstoryValMess = '';
+  if( isValidLengthBackstory(valueBackstory) ) {
+  backstoryValMess = ''
+  } else {
+  backstoryValMess = 'Maxantalet tecken upnått (260 st)'
+}
+
+  // function clearFormsPerson() {
+  //   setValueName('');
+  //   setValueHomeworld('');
+  //   setValueIntelligence('');
+  //   setValueStrength('');
+  //   setValueBackstory('')
     
-    setTouchedHomeWorld(false);
-    setTouchedName(false);
-    setTouchedIntelligence(false)
-    setTouchedStrength(false)
-  }
+  //   setTouchedHomeWorld(false);
+  //   setTouchedName(false);
+  //   setTouchedIntelligence(false)
+  //   setTouchedStrength(false)
+  // }
 
   const handleSubmit = event => {
   if (valueName && valueHomeworld && valueBackstory && valueIntelligence && valueStrength && valueId) {
@@ -212,10 +226,11 @@ const charactersForm = (
       <span className="space-for-val">  <label>Namn</label>  <span>{nameValMess}</span>  </span>
       
       <input type="text" className={cssClassName} value={valueName} placeholder="Namn"
-      onChange={handleChangeFormName} onBlur={event => setTouchedName(true)} />
+      onChange={handleChangeFormName} onMouseLeave={event => setTouchedName(true)} onBlur={event => setTouchedName(true)} onFocus={event => setTouchedName(false)}/>
     
       <span className="space-for-val">  <label>Värld</label>  <span>{homeWorldValMess}</span>  </span>
-      <select value={valueHomeworld} onChange={handleChangeFormHomeworld} onBlur={event => setTouchedHomeWorld(true)}
+      <select value={valueHomeworld} onChange={handleChangeFormHomeworld} onMouseLeave={event => setTouchedHomeWorld(true)} 
+      onBlur={event => setTouchedHomeWorld(true)} onFocus={event => setTouchedHomeWorld(false)}
       className={cssClassHomeworld}>
 
         <option value="" disabled hidden>Världar...</option>
@@ -225,22 +240,24 @@ const charactersForm = (
         <option value={'Hisingen'}>Hisingen</option>
       </select>
 
-      <span className="space-for-val">  <label>Backstory</label>  <span></span>  </span>
-      <textarea value={valueBackstory} onChange={handleChangeFormBackstory}
-      placeholder="Din karaktärs bakgrundsstory(Valfri)"></textarea>
+      <span className="space-for-val">  <label>Backstory(Valfri)</label>  <span>{backstoryValMess}</span>  </span>
+      <textarea value={valueBackstory} onChange={handleChangeFormBackstory} maxLength="260"
+      placeholder="(Valfri) Bakgrundsstory, max 260 Tecken"></textarea>
 
       <span className="space-for-val">  <label>Intelligens</label>  <span>{intelligenceValMess}</span>  </span>
-      <input type="text" maxLength="2" className={cssClassIntelligence} value={valueIntelligence} placeholder="Intelligens 1-10"
-      onChange={handleChangeFormIntelligence} onBlur={event => setTouchedIntelligence(true)} />
-      <input type="range" min="1" max="10" value={valueIntelligence} className="slider"
-      onChange={handleChangeFormIntelligence} onBlur={event => setTouchedIntelligence(true)}/>
+      <input type="text" maxLength="2" className={cssClassIntelligence} value={valueIntelligence} placeholder="Intelligens 1-10, skriv in eller använd slider"
+      onChange={handleChangeFormIntelligence} onBlur={event => setTouchedIntelligence(true)} 
+      onFocus={event => setTouchedIntelligence(false)} onMouseLeave={event => setTouchedIntelligence(true)}/>
+      <input tabIndex="-1" type="range" min="1" max="10" value={valueIntelligence} className="slider"
+      onChange={handleChangeFormIntelligence} onBlur={event => setTouchedIntelligence(true)} onFocus={event => setTouchedIntelligence(false)} onMouseLeave={event => setTouchedIntelligence(true)}/>
 
 
       <span className="space-for-val">  <label>Styrka</label>  <span>{strengthValMess}</span>  </span>
-      <input type="text" maxLength="2" className={cssClassStrength} value={valueStrength} placeholder="Styrka 1-10"
-      onChange={handleChangeFormStrength} onBlur={event => setTouchedStrength(true)} />
-      <input type="range" min="1" max="10" value={valueStrength} className="slider"
-      onChange={handleChangeFormStrength}/>
+      <input type="text" maxLength="2" className={cssClassStrength} value={valueStrength} placeholder="Styrka 1-10, skriv in eller använd slider"
+      onChange={handleChangeFormStrength} onBlur={event => setTouchedStrength(true)} 
+      onFocus={event => setTouchedStrength(false)} onMouseLeave={event => setTouchedStrength(true)}/>
+      <input tabIndex="-1" type="range" min="1" max="10" value={valueStrength} className="slider"
+      onChange={handleChangeFormStrength} onBlur={event => setTouchedStrength(true)} onFocus={event => setTouchedStrength(false)} onMouseLeave={event => setTouchedStrength(true)}/>
 
 
       <button className="btn-add" disabled={btnDisable} type="submit">Ändra karaktär</button>

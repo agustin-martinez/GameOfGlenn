@@ -13,7 +13,7 @@ const Hufvudstaden = () => {
     }, [charactersData]);
 
     const outputCharacters = fromHufvudstaden.map(charItem => (
-        <div className="Characters" key={charItem.name}>
+        <div className="Characters" key={charItem.id}>
             <div> NAME: {charItem.name} </div>
             <div> WORLD {charItem.world} </div>
             <div> INTELLIGENCE: {charItem.intelligence} </div>
