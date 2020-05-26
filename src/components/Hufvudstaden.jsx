@@ -45,7 +45,7 @@ const Hufvudstaden = () => {
                 
                 <h1 className="h1">Hufvudstaden</h1>
                 <div>
-                    <img src="Hufvudstaden.svg" alt="Karta över Hufvudstaden"></img>
+                    <img src="Hufvudstaden-big.svg" alt="Karta över Hufvudstaden"></img>
                 </div>
                 <p className="p1">
                     Hufvudstaden, världsmetropolen som är belägen i centrum av världen. 

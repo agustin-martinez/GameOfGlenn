@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { actions } from "../features/characters";
 import { actions as actionsEdit } from "../features/editCharacter";
+// import hufvudstaden from "../components/assets/hufvudstaden.svg";
 import "../popup.css";
 import "../form.css";
 
@@ -88,7 +89,9 @@ const Characters = () => {
         </div>
         <div className="world">
           <div className="world-text"> VÄRLD: {charItem.world} </div>
-          <div className="world-pic"> {charItem.pic} </div>
+          <div className="world-pic">
+          <img className="world-pic-inside" src={`${charItem.world}.svg`} alt="Karta över Hisingen"></img>
+				</div>
         </div>
         <div className="backstory"> BACKSTORY: {charItem.backstory} </div>
         <div className="iq">INTELLIGENS:</div>
