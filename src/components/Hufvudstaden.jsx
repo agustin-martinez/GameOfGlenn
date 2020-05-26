@@ -13,7 +13,7 @@ const Hufvudstaden = () => {
     }, [charactersData]);
 
     const outputCharacters = fromHufvudstaden.map(charItem => (
-        <div className="character-item" key={charItem.name}>
+        <div className="character-item" key={charItem.id}>
             <div className="card-content">
                 <div className="name-box">
                     <div className="name"> {charItem.name} </div>

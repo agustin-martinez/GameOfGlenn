@@ -65,7 +65,7 @@ const Characters = () => {
   );
 
   const outputCharacters = resultList.map((charItem) => (
-    <div className="character-item" key={charItem.name}>
+    <div className="character-item" key={charItem.id}>
       <div className="card-content">
         <div className="name-box">
           <div className="name"> {charItem.name} </div>
@@ -82,7 +82,7 @@ const Characters = () => {
             <div className="btm-delete-box">
               <button
                 className="btm-delete"
-                onClick={() => dispatch(actions.removeCharacter(charItem.name))}
+                onClick={() => dispatch(actions.removeCharacter(charItem.id))}
               ></button>
             </div>
           </div>

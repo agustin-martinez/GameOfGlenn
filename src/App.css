@@ -242,6 +242,7 @@ aside {
 	display: flex;
 	justify-content: space-between;
 	padding: 0 10px 0 10px;
+	
 }
 
 .name {
@@ -294,16 +295,19 @@ aside {
 
 .world {
 	display: flex;
-	padding-top: 30px;
-	height: 55px;
+	padding-top: 0px;
+	height: 65px;
+	justify-content: space-between;
 }
 
 .world-pic-inside {
-	
+	padding-right: 1.2em;
+	padding-top: 0.8em;
 }
 
 .world-text {
 	padding-left: 10px;
+	padding-top: 1.3em;
 }
 
 .world-pic {
