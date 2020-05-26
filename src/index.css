@@ -97,7 +97,7 @@ li.dropdown {
 	border: 2.5px solid #ECAE59;
 }
 
-.dropdown-content  {
+.dropdown-content a {
 	color: #ECAE59;
 	padding: 12px 16px;
 	text-decoration: none;

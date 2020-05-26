@@ -13,17 +13,28 @@ const Hufvudstaden = () => {
     }, [charactersData]);
 
     const outputCharacters = fromHufvudstaden.map(charItem => (
-        <div className="character-item" key={charItem.id}>
-            <div> NAMN: {charItem.name} </div>
-            <div> VÄRLD: {charItem.world} </div>
-            <div> INTELLIGENS</div>
-            <input readOnly type="range" max="10" value={charItem.intelligence}></input>
-            <div> STYRKA:  </div>
-            <input readOnly type="range" max="10" value={charItem.strength}></input>
-            <div> BACKSTORY: {charItem.backstory} </div>
-            <div> ID: {charItem.id} </div>
-            
+        <div className="character-item" key={charItem.name}>
+        <div className="card-content">
+          <div className="name-box">
+            <div className="name"> {charItem.name} </div>  
+          </div>
+          <div className="world">
+            <div className="world-text"> VÄRLD: {charItem.world} </div>
+            <div className="world-pic"> {charItem.pic} </div>
+          </div>
+          <div className="backstory"> BACKSTORY: {charItem.backstory} </div>
+          <div className="iq">INTELLIGENS:</div>
+          <input
+            readOnly
+            type="range"
+            max="10"
+            value={charItem.intelligence}
+          ></input>
+          <div className="power"> STYRKA: </div>
+          <input readOnly type="range" max="10" value={charItem.strength}></input>
+          <div className="id"> ID: {charItem.id} </div>
         </div>
+      </div>
         
     ))
 
