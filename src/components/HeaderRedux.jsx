@@ -3,7 +3,7 @@ import logo from "../components/assets/logo.svg";
 
 const HeaderRedux = ({ setScreenFromHeader }) => {
   return (
-    <div>
+    <div className="header-container">
       <div className="Logo-Background">
         {" "}
         <img

@@ -15,27 +15,6 @@ const Slottsskogen = () => {
 
     const outputCharacters = fromSlottskogen.map(charItem => (
         <div className="character-item" key={charItem.name}>
-<<<<<<< HEAD
-        <div className="card-content">
-          <div className="name-box">
-            <div className="name"> {charItem.name} </div>  
-          </div>
-          <div className="world">
-            <div className="world-text"> VÄRLD: {charItem.world} </div>
-            <div className="world-pic"> {charItem.pic} </div>
-          </div>
-          <div className="backstory"> BACKSTORY: {charItem.backstory} </div>
-          <div className="iq">INTELLIGENS:</div>
-          <input
-            readOnly
-            type="range"
-            max="10"
-            value={charItem.intelligence}
-          ></input>
-          <div className="power"> STYRKA: </div>
-          <input readOnly type="range" max="10" value={charItem.strength}></input>
-          <div className="id"> ID: {charItem.id} </div>
-=======
             <div className="card-content">
                 <div className="name-box">
                     <div className="name"> {charItem.name} </div>
@@ -58,9 +37,8 @@ const Slottsskogen = () => {
                 <input readOnly type="range" max="10" value={charItem.strength}></input>
                 <div className="id"> ID: {charItem.id} </div>
             </div>
->>>>>>> dev
         </div>
-      </div>
+      
     ))
 
     return (
