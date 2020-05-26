@@ -14,14 +14,16 @@ const Slottsskogen = () => {
 
 
     const outputCharacters = fromSlottskogen.map(charItem => (
-        <div className="Characters" key={charItem.id}>
-            <div> NAME: {charItem.name} </div>
-            <div> WORLD {charItem.world} </div>
-            <div> INTELLIGENCE: {charItem.intelligence} </div>
-            <div> STRENGHT: {charItem.strength} </div>
+        <div className="character-item" key={charItem.id}>
+            <div> NAMN: {charItem.name} </div>
+            <div> VÄRLD: {charItem.world} </div>
+            <div> INTELLIGENS</div>
+            <input readOnly type="range" max="10" value={charItem.intelligence}></input>
+            <div> STYRKA:  </div>
+            <input readOnly type="range" max="10" value={charItem.strength}></input>
             <div> BACKSTORY: {charItem.backstory} </div>
             <div> ID: {charItem.id} </div>
-            {/* <button  onClick={() => deleteCharacter(charactersItem)}>Delete</button> */}
+           
         </div>
     ))
 
@@ -32,11 +34,15 @@ const Slottsskogen = () => {
             <div>
             <img src="Slottsskogen.svg" alt="Karta över Slottsskogen"></img>
             </div>
-                <p className="p1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga, est quae. Fuga reprehenderit facere, sint quis laborum consequuntur atque aperiam vel quaerat eos, quas itaque eius. Delectus consectetur dolore suscipit eligendi quidem quibusdam porro nulla voluptate quaerat reprehenderit consequuntur sit, pariatur voluptatem necessitatibus rem provident vel tenetur impedit vitae libero a repudiandae culpa. Eius eaque velit ad dolorum. Ab distinctio et commodi obcaecati totam amet nesciunt accusamus quia itaque, officia neque pariatur, dolore suscipit unde eum quas. Alias, ad a? Voluptatibus qui architecto adipisci nulla inventore eius, earum delectus at. Est exercitationem blanditiis iusto unde quia, a accusamus id repellendus?</p>
+                <p className="p1">
+                    Den stora uppslukande skogen öster om Hufvudstaden, 
+                    där det är svårt att skilja på dag och natt då delar av skogen har träd som når sällan kådade höjder, och snårighet som omintetgör alla möjligheter att återse solens sken. 
+                    Slottsskogsbon är en finurlig varelse som älskar det social och har lätt till skratt. 
+                    Visdomen från de äldre går inte att hitta i någon annan del av världen.</p>
                 <h2 className="h2">Karaktärer som är här</h2>
-                <div>
-                {outputCharacters}
-                </div>
+                <div className="container">
+            <div className="persons">{outputCharacters}</div>
+            </div>
             </div>
     </div>
     )

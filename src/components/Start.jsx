@@ -23,10 +23,9 @@ const Start = () => (
             <img src={bannerMedia} alt="" />
           </div>
           <p className="Text">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type
+          En spännande värld som är uppdelad i fyra olika världar där alla olika världar har unik historia och unika karaktärer. 
+          En start för er att bygga vidare ER story, ER karaktärs story och ER världs story. 
+          Låt fantasin flöda och låt spelet börja!
           </p>
           <div className="Glenn">
             <img src={glenn} className="glenn" alt="glenn" />
@@ -40,10 +39,9 @@ const Start = () => (
             <img src={bannerMediaInfo} alt="" />
           </div>
           <p className="Text">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type
+          De fyra världarna, Hvfudstaden där Glenn den 10:e bor och som är ett centrum för världen, 
+          Slottsskogen där visdomen gömmer sig bakom tallar och snår, Donsö där allt är ett med havet, 
+          Hisingen där kriminalitet och mörker är täcke över ön.
           </p>
           <img src={snake} className="Snake" alt="snake" />
         </div>

@@ -30,7 +30,6 @@ main {
 	margin-top: 0.25em;
 	border-radius: 4px;
 	width: 100%;
-	border: 1px solid white;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
