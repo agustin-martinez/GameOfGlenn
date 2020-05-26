@@ -74,6 +74,9 @@ const Characters = () => {
                 className="btm-edit"
                 onClick={() => handleEdit(charItem)}
               ></button>
+                            <button
+                onClick={() => handleEdit(charItem)}
+              ></button>
             </div>
             <div className="btm-delete-box">
               <button
@@ -108,7 +111,7 @@ const Characters = () => {
         className="btm-add-character"
         onClick={() => setShowAdd(!showAdd)}
       >
-        Add character
+        Lägg till karaktär
       </button>
       <div className="container">
         <div className="persons">{outputCharacters}</div>

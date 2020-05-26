@@ -26,7 +26,7 @@ form>textarea {
 	width: 95%;
 	outline: 0;
 	background: #eee;
-	padding: 15px 20px 15px 0px;
+	padding: 3px 20px 15px 0px;
 	border: 3px solid #eee;
 }
 
@@ -46,6 +46,21 @@ form {
 	margin: 0 auto;
 }
 
+<<<<<<< HEAD
+=======
+form > span> label {
+    color: #ECAE59
+}
+
+form > .space-for-val {
+    width: 100%;
+    height: 1.2em;
+    margin-top: 3px;
+    display: flex;
+    justify-content: space-between;
+}
+
+>>>>>>> dev
 
 form>button {
 	display: block;
@@ -86,6 +101,8 @@ form input[type="range"] {
 	width: 101%;
 	cursor: pointer;
 	border-radius: 0;
+	border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 	/* iOS */
 	outline: none;
 	/* Remove outline */
@@ -93,6 +110,7 @@ form input[type="range"] {
 
 
 form input[type=range]::-webkit-slider-thumb {
+<<<<<<< HEAD
 	-webkit-appearance: none;
 	border: none;
 	height: 28px;
@@ -106,6 +124,18 @@ form input[type=range]::-webkit-slider-thumb {
 	outline: none;
 	/* Remove outline */
 }
+=======
+    -webkit-appearance: none;
+    height: 12px;
+    width: 9px;
+    background:  rgb(221, 163, 36);
+    border: 4px solid rgb(0, 0, 0);
+    -webkit-appearance: none;
+    box-shadow: -100vw 0 0 100vw #ECAE59;
+    outline: none; /* Remove outline */
+}
+
+>>>>>>> dev
 
 input[type="range"] {
 	-webkit-appearance: none;
