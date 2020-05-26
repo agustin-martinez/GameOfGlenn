@@ -20,10 +20,13 @@ function App() {
 
   const [currentScreen, setCurrentScreen] = useState(HOME);
 
+
+
   let content = null;
   switch (currentScreen) {
     case HOME:
       content = <Start />;
+      
       break;
     case HUFVUDSTADEN:
       content = <Hufvudstaden />;

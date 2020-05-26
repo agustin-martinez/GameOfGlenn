@@ -223,9 +223,9 @@ const charactersForm = (
   <div>
     <form className="flexRowShow" onSubmit={handleSubmit} id="test">
           
-      <span className="space-for-val">  <label>Namn</label>  <span>{nameValMess}</span>  </span>
+      <span className="space-for-val">  <label>Förnamn, (efternamn)</label>  <span>{nameValMess}</span>  </span>
       
-      <input type="text" className={cssClassName} value={valueName} placeholder="Namn"
+      <input type="text" className={cssClassName} value={valueName} placeholder="Fyll i förnamn (efternamn)"
       onChange={handleChangeFormName} onMouseLeave={event => setTouchedName(true)} onBlur={event => setTouchedName(true)} onFocus={event => setTouchedName(false)}/>
     
       <span className="space-for-val">  <label>Värld</label>  <span>{homeWorldValMess}</span>  </span>

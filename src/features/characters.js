@@ -18,13 +18,25 @@ const initialState = [
 ]
 
 
+// [addToCharacters]: (state, action) => {
+//     return [
+//         ...state,
+//         action.payload
+//     ];
+
+// },  // addToCart
+
 const reducer = createReducer(initialState, {
     [addToCharacters]: (state, action) => {
-            return [
+        let found = state.find(character => character.name === action.payload.name);
+        if( found ) {
+            console.log('Readan tillagd')
+        } else {
+                return [
                 ...state,
                 action.payload
-            ];
-        
+            ]
+        }
     },  // addToCart
 
     [removeCharacter]: (state, action) => (
@@ -37,56 +49,11 @@ const reducer = createReducer(initialState, {
     } else {
         return character
     }
-      // Alternativ: return (character.id === action.payload.id) ? action.payload : character
+
 })
 
     
 })
-
-// [editCharacter]: (state, action) => {
-//   return state.map((item, index) => {
-//   // Hitta item med matchande id
-//   if(item.character.id === action.payload.character.id) {
-//     // Return a new object Returnera ett nytt
-//     return {
-//       character: action.payload  // replace the email addr
-//     }
-//   }
-//   // Leave every other item unchanged
-//   return item;
-// });
-// },
-
-// function alreadyAdded () {
-    
-// }
-
-// const reducer = createReducer(initialState, {
-//     [addToCharacters]: (state, action) => {
-//         let found = state.find(characterItem => characterItem.character.name === 
-//         action.payload.name);
-//         if(found) {
-//             alreadyAdded(action.payload.name)
-//             console.log('already added')
-//         } else {
-//             return [
-//                 ...state, { character: action.payload, strenght: 1 }
-//             ];
-//         }
-//     }
-// })
-
-// [editCharacter]: (state, action) => (
-//     state.map((cartItem ,index) => {
-//         if( index !== action.index ) {
-//             return cartItem
-//         } 
-//             return {
-//             ...cartItem,
-//             ...action.cartItem
-//         }
-//     })
-// )
 
 
 
