@@ -127,7 +127,6 @@ li.dropdown {
 /* CSS för världarna*/
 
 .character-item {
-	height: 7em;
 	border: 1.5px solid black;
 	background: rgb(5, 5, 5);
 	padding-bottom: 0.5em;

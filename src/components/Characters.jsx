@@ -6,6 +6,7 @@ import { useDispatch } from 'react-redux'
 import { actions } from '../features/characters'
 import { actions as actionsEdit } from '../features/editCharacter'
 import '../popup.css';
+import '../form.css';
 
 
 const Characters = () => {
@@ -81,7 +82,7 @@ const SearchBar = (
     ))
     return (
         <div className="border">
-            
+            <input type="range" max="10" value="5"></input>
             {SearchBar}
             <div className="container">
             <div className="persons">{outputCharacters}</div>

@@ -28,7 +28,7 @@ const reducer = createReducer(initialState, {
     },  // addToCart
 
     [removeCharacter]: (state, action) => (
-        state.filter(cartItem => cartItem.id !== action.payload)
+        state.filter(character => character.id !== action.payload)
     ),
 
     [editCharacter]: (state, action) => state.map((character, index) => {
