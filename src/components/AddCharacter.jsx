@@ -220,11 +220,12 @@ const charactersForm = (
   <div>
     <form className="flexRowShow" onSubmit={handleSubmit} id="test">
     
-      <span className="space-for-val">{nameValMess}</span>
+    <span className="space-for-val">  <label>Förnamn, (efternamn)</label>  <span>{nameValMess}</span>  </span>
+
       <input type="text" className={cssClassName} value={valueName} placeholder="Fyll i förnamn (efternamn)"
       onChange={handleChangeFormName} onBlur={event => setTouchedName(true)} />
 
-      <span className="space-for-val">{homeWorldValMess}</span>
+      <span className="space-for-val">  <label>Värld</label>  <span>{homeWorldValMess}</span>  </span>
       <select value={valueHomeworld} onChange={handleChangeFormHomeworld} onBlur={event => setTouchedHomeWorld(true)}
       className={cssClassHomeworld}>
 
@@ -235,17 +236,17 @@ const charactersForm = (
         <option value={'Hisingen'}>Hisingen</option>
       </select>
 
-      <span className="space-for-val">{backstoryValMess}</span>
+      <span className="space-for-val">  <label>Backstory(Valfri)</label>  <span>{backstoryValMess}</span>  </span>
       <textarea value={valueBackstory} onChange={handleChangeFormBackstory} maxLength="260"
       placeholder="(Valfri) Bakgrundsstory, max 260 Tecken"></textarea>
 
-      <span className="space-for-val">{intelligenceValMess}</span>
+      <span className="space-for-val">  <label>Intelligens</label>  <span>{intelligenceValMess}</span>  </span>
       <input type="text" maxLength="2" className={cssClassIntelligence} value={valueIntelligence} placeholder="Intelligens 1-10, , skriv in eller använd slider"
       onChange={handleChangeFormIntelligence} onBlur={event => setTouchedIntelligence(true)} />
       <input tabIndex="-1" type="range" min="1" max="10" value={valueIntelligence} className="slider"
       onChange={handleChangeFormIntelligence} onBlur={event => setTouchedIntelligence(true)}/>
 
-      <span className="space-for-val">{strengthValMess}</span>
+      <span className="space-for-val">  <label>Styrka</label>  <span>{strengthValMess}</span>  </span>
       <input type="text" maxLength="2" className={cssClassStrength} value={valueStrength} placeholder="Styrka 1-10, , skriv in eller använd slider"
       onChange={handleChangeFormStrength} onBlur={event => setTouchedStrength(true)} />
       <input tabIndex="-1" type="range" min="1" max="10" value={valueStrength} className="slider"

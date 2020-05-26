@@ -13,14 +13,29 @@ const Donso = () => {
     }, [charactersData]);
 
     const outputCharacters = fromDonso.map(charItem => (
-        <div className="Characters" key={charItem.id}>
-            <div> NAME: {charItem.name} </div>
-            <div> WORLD {charItem.world} </div>
-            <div> INTELLIGENCE: {charItem.intelligence} </div>
-            <div> STRENGHT: {charItem.strength} </div>
-            <div> BACKSTORY: {charItem.backstory} </div>
-            <div> ID: {charItem.id} </div>
-            {/* <button  onClick={() => deleteCharacter(charactersItem)}>Delete</button> */}
+        <div className="character-item" key={charItem.name}>
+            <div className="card-content">
+                <div className="name-box">
+                    <div className="name"> {charItem.name} </div>
+                </div>
+                <div className="world">
+                    <div className="world-text"> VÄRLD: {charItem.world} </div>
+                    <div className="world-pic"> {charItem.pic} </div>
+                </div>
+                <div className="backstory"> BACKSTORY: {charItem.backstory} </div>
+                <div className="iq">INTELLIGENS:</div>
+                
+                <input
+                    readOnly
+                    type="range"
+                    max="10"
+                    value={charItem.intelligence}
+                ></input>
+
+                <div className="power"> STYRKA: </div>
+                <input readOnly type="range" max="10" value={charItem.strength}></input>
+                <div className="id"> ID: {charItem.id} </div>
+            </div>
         </div>
     ))
 
@@ -35,14 +50,19 @@ const Donso = () => {
 					</img>
 				</div>
 				<p className="p1">
-				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga, est quae. Fuga reprehenderit facere, sint quis laborum consequuntur atque aperiam vel quaerat eos, quas itaque eius. Delectus consectetur dolore suscipit eligendi quidem quibusdam porro nulla voluptate quaerat reprehenderit consequuntur sit, pariatur voluptatem necessitatibus rem provident vel tenetur impedit vitae libero a repudiandae culpa. Eius eaque velit ad dolorum. Ab distinctio et commodi obcaecati totam amet nesciunt accusamus quia itaque, officia neque pariatur, dolore suscipit unde eum quas. Alias, ad a? Voluptatibus qui architecto adipisci nulla inventore eius, earum delectus at. Est exercitationem blanditiis iusto unde quia, a accusamus id repellendus?
+				Ön söder om hufvudstaden, du måste korsa det stormiga havet för att nå dit. 
+                Ön beskrivs ofta av utbölingar som kal, blåsig och ogästvänlig. 
+                Medan öborna själva beskriver ön som livets gåva till denna värld. 
+                Donsö bebos av stora släkter som under många generationer styrt och härjat i den södra ö-världen. 
+                Donsöbon är härskare över hav och skärgård. 
+                Skaldjur, seglats och styrka är mottot som du måste behärska för att kunna överleva här.
 				</p>
 				<h2 className="h2">
 				Karaktärer som är här
 				</h2>
-				<div>
-				{outputCharacters}
-				</div>
+				<div className="container">
+            <div className="persons">{outputCharacters}</div>
+            </div>
 			</div>
         </div>
     )
