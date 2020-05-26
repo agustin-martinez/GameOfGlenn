@@ -28,15 +28,10 @@ const initialState = [
 
 const reducer = createReducer(initialState, {
     [addToCharacters]: (state, action) => {
-        let found = state.find(character => character.name === action.payload.name);
-        if( found ) {
-            console.log('Readan tillagd')
-        } else {
-                return [
-                ...state,
-                action.payload
-            ]
-        }
+        return [
+            ...state,
+            action.payload
+        ];
     },  // addToCart
 
     [removeCharacter]: (state, action) => (
@@ -52,6 +47,18 @@ const reducer = createReducer(initialState, {
 
 })
 
+
+// [addToCharacters]: (state, action) => {
+//     let found = state.find(character => character.name === action.payload.name);
+//     if( found ) {
+//         console.log('Readan tillagd')
+//     } else {
+//             return [
+//             ...state,
+//             action.payload
+//         ]
+//     }
+// },
     
 })
 
