@@ -199,43 +199,121 @@ aside {
 	}
 }
 
-/* .App {
-  text-align: center;
+.SearchBar {
+	padding-top: 40px;
+	padding-bottom: 20px;
 }
 
-.Characters {
-  border: 1px solid black;
-  padding: 1em;
-  margin: 0 10em;
-  border-radius: 4px;
+.character-input {
+	padding: 5px 10px 5px 10px;
+	width: 300px;
 }
 
-.App {
-  text-align: center;
-  border: none;
+.btm-add-character {
+	font-family: Didact Gothic;
+	margin-bottom: 50px;
+	padding: 10px 20px 10px 20px;
+	width: 150px;
+	border: none;
+	background: #3A5358;
+	border: 1px solid #ECAE59;
+	box-sizing: border-box;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	color: #ffffff;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 10vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.character-item {
+	background-image: url(../src/components/assets/character-card-frame.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 350px;
+	height: 425px;
 }
 
-.App-link {
-  color: #61dafb;
+.card-content {
+	display: flex;
+	flex-direction: column;
+	padding: 5px 10px 30px 10px;
+	justify-content: space-evenly;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.name-box {
+	display: flex;
+	justify-content: space-between;
+	padding: 0 10px 0 10px;
 }
- */
+
+.name {
+	padding: 10px 0 0 0;
+}
+
+.btm-box {
+	display: flex;
+	justify-self: right;
+	align-items: right;
+	background: transparent;
+	border: none;
+
+}
+
+.btm-delete-box {
+	background-image: url(../src/components/assets/skull.png);
+	background-repeat: no-repeat;
+	height: 27px;
+	width: 27px;
+	margin: 10px;
+	border: none;
+	margin: 4px 0 2px 10px;
+	background-position: center;
+}
+
+.btm-delete {
+	border: none;
+	background: transparent;
+}
+
+.btm-edit-box {
+	background-image: url(../src/components/assets/edit.svg);
+	background-repeat: no-repeat;
+	height: 29px;
+	width: 29px;
+	margin: 3px 0 2px 10px;
+	border: none;
+	background-position: center;
+}
+
+
+.btm-edit {
+	border: none;
+}
+
+.id {
+	display: none;
+}
+
+.world {
+	display: flex;
+	padding-top: 30px;
+	height: 30px;
+}
+
+.world-text {
+	padding-left: 10px;
+}
+
+.world-pic {
+	height: 70px;
+}
+
+.iq {
+	padding: 10px;
+}
+
+.power {
+	padding: 10px;
+}
+
+.backstory {
+	padding: 10px;
+	height: 90px;
+}
