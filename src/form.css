@@ -1,51 +1,52 @@
 .flexRowShow {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .valid {
-    border-color: rgb(37, 211, 110);
+	border-color: rgb(37, 211, 110);
 }
 
-.invalid  {
-    border-color: rgb(230, 81, 81);
+.invalid {
+	border-color: rgb(230, 81, 81);
 }
 
-form > select {
-    display: block;
-    width: 101%;
-    outline: 0;
-    background: #eee;
-    padding: 15px 20px 15px 0px;
-    border: 3px solid #eee;
+form>select {
+	display: block;
+	width: 101%;
+	outline: 0;
+	background: #eee;
+	padding: 15px 20px 15px 0px;
+	border: 3px solid #eee;
 }
 
-form > textarea {
-    display: block;
-    width: 95%;
-    outline: 0;
-    background: #eee;
-    padding: 15px 20px 15px 0px;
-    border: 3px solid #eee;
+form>textarea {
+	display: block;
+	width: 95%;
+	outline: 0;
+	background: #eee;
+	padding: 15px 20px 15px 0px;
+	border: 3px solid #eee;
 }
 
-form >  button:hover {
-    opacity: 0.8;
+form>button:hover {
+	opacity: 0.8;
 }
 
-form > button:disabled {
-    background-color: rgb(171, 189, 196);
-    cursor: not-allowed;
-    color:rgb(255, 255, 255);
+form>button:disabled {
+	background-color: rgb(171, 189, 196);
+	cursor: not-allowed;
+	color: rgb(255, 255, 255);
 }
 
 
 form {
-    max-width: 450px;
-    margin: 0 auto;
+	max-width: 450px;
+	margin: 0 auto;
 }
 
+<<<<<<< HEAD
 form > button {
     display: block;
     width: 101%;
@@ -55,19 +56,33 @@ form > button {
     padding: 15px 20px 15px 0px;
     border: 3px solid #eee;
     cursor: pointer;
+=======
+
+form>button {
+	display: block;
+	width: 101%;
+	margin: 20px 0;
+	background: rgb(64, 128, 101);
+	color: white;
+	padding: 15px 20px 15px 0px;
+	border: 3px solid #eee;
+	cursor: pointer;
+>>>>>>> agustin
 }
-form input{
-    border: 3px solid #eee;
-    width: 100%;
-    padding: 15px 0px 15px 0px;
-    background: #eee;
+
+form input {
+	border: 3px solid #eee;
+	width: 100%;
+	padding: 15px 0px 15px 0px;
+	background: #eee;
 }
 
 form input:focus {
-    outline: 0;
-    background: white;
+	outline: 0;
+	background: white;
 }
 
+<<<<<<< HEAD
 
 form input[type="range"] { 
     padding: 0;
@@ -80,10 +95,32 @@ form input[type="range"] {
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     outline: none; /* Remove outline */
+=======
+.space-for-val {
+	height: 1.2em;
+	margin-top: 3px;
+}
+
+
+
+form input[type="range"] {
+	padding: 0;
+	-webkit-appearance: none;
+	border: 0px;
+	overflow: hidden;
+	height: 12px;
+	width: 101%;
+	cursor: pointer;
+	border-radius: 0;
+	/* iOS */
+	outline: none;
+	/* Remove outline */
+>>>>>>> agustin
 }
 
 
 form input[type=range]::-webkit-slider-thumb {
+<<<<<<< HEAD
     -webkit-appearance: none;
     height: 12px;
     width: 9px;
@@ -133,4 +170,44 @@ input[type="range"] {
     box-shadow: -100vw 0 0 100vw #ECAE59;
     border: 2px solid #ECAE59; /* 1 */
     outline: none; /* Remove outline */
+=======
+	-webkit-appearance: none;
+	border: none;
+	height: 28px;
+	border: 0px;
+	width: 15px;
+	background: rgb(241, 241, 241);
+	border: 7px solid rgb(69, 119, 98);
+
+	-webkit-appearance: none;
+	box-shadow: -100vw 0 0 100vw rgb(233, 208, 176);
+	outline: none;
+	/* Remove outline */
+}
+
+input[type="range"] {
+	-webkit-appearance: none;
+	position: relative;
+	overflow: hidden;
+	height: 20px;
+	width: 350;
+	margin-left: 10px;
+	margin-right: 10px;
+	border-radius: 0;
+	outline: none;
+}
+
+::-webkit-slider-runnable-track {
+	background: #889395;
+}
+
+::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	width: 20px;
+	height: 40px;
+	background: #ECAE59;
+	box-shadow: -100vw 0 0 100vw #ECAE59;
+	border: 2px solid #ECAE59;
+	outline: none;
+>>>>>>> agustin
 }
