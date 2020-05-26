@@ -8,6 +8,7 @@
 	align-items: flex-end;
 	height: 140px;
 	background: linear-gradient(179.89deg, #374c4f 0.99%, #5d767b 133.08%);
+	cursor: pointer;
 }
 
 body {

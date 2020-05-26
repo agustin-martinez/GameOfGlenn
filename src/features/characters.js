@@ -28,17 +28,17 @@ const reducer = createReducer(initialState, {
     },  // addToCart
 
     [removeCharacter]: (state, action) => (
-        state.filter(cartItem => cartItem.name !== action.payload)
+        state.filter(cartItem => cartItem.id !== action.payload)
     ),
 
     [editCharacter]: (state, action) => state.map((character, index) => {
-      if( character.id === action.payload.id ) {
-          return action.payload;
-      } else {
-          return character
-      }
+    if( character.id === action.payload.id ) {
+        return action.payload;
+    } else {
+        return character
+    }
       // Alternativ: return (character.id === action.payload.id) ? action.payload : character
-  })
+})
 
     
 })

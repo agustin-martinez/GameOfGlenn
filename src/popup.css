@@ -53,6 +53,7 @@
   }
   
   .add-popup-header {
+    text-align: center;
     padding: 2px 16px;
     background-color: #2B4045;
     color: white;
@@ -66,6 +67,7 @@
     padding: 2px 16px;}
   
   .add-popup-footer {
+    text-align: center;
     font-family: 'Didact Gothic';
     font-size: 1em;
     padding: 15px 16px;

@@ -13,11 +13,11 @@ const Hufvudstaden = () => {
     }, [charactersData]);
 
     const outputCharacters = fromHufvudstaden.map(charItem => (
-        <div className="Characters" key={charItem.name}>
-            <div> NAMN: {charItem.name} </div>
-            <div> VÄRLD: {charItem.world} </div>
-            <div> INTELLIGENS: {charItem.intelligence} </div>
-            <div> STYRKA: {charItem.strength} </div>
+        <div className="Characters" key={charItem.id}>
+            <div> NAME: {charItem.name} </div>
+            <div> WORLD {charItem.world} </div>
+            <div> INTELLIGENCE: {charItem.intelligence} </div>
+            <div> STRENGHT: {charItem.strength} </div>
             <div> BACKSTORY: {charItem.backstory} </div>
             <div> ID: {charItem.id} </div>
             {/* <button  onClick={() => deleteCharacter(charactersItem)}>Delete</button> */}
@@ -45,7 +45,6 @@ const Hufvudstaden = () => {
         
     )
     
-       
 }
 
 export default Hufvudstaden;
