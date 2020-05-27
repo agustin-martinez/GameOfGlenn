@@ -1,378 +1,469 @@
-@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap");
 
 .App-start {
-	width: 100%;
-	font-family: 'Didact Gothic', sans-serif;
+  width: 100%;
+  font-family: "Didact Gothic", sans-serif;
 }
 
 .Logo-Background {
-	display: flex;
-	justify-content: center;
-	align-items: flex-end;
-	height: 140px;
-	background: linear-gradient(179.89deg, #374c4f 0.99%, #5d767b 133.08%);
-	cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 140px;
+  background: linear-gradient(179.89deg, #374c4f 0.99%, #5d767b 133.08%);
+  cursor: pointer;
 }
 
-
-
-
 body {
-	margin: 0;
-	padding: 0;
-	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'Didact Gothic', 'Game of Thrones', 'Prata'
-		sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	color: white;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    "Didact Gothic", "Game of Thrones", "Prata" sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: white;
 }
 
 header {
-	/* 	border-top: 2px solid #ecae59;
-	border-bottom: 2px solid #ecae59; */
-	/* 	display: flex; */
-	justify-content: space-evenly;
-	align-items: center;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.About-Box {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 0 60px 0 60px;
+}
+
+.About-GOG-Media {
+  display: none;
 }
 
 ul {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .Tree-Options {
-	background: #2b4045;
-	border-top: 2px solid #ecae59;
-	border-bottom: 2px solid #ecae59;
-	height: 43px;
-	display: flex;
-	justify-content: space-evenly;
-	align-items: center;
+  background: #2b4045;
+  border-top: 2px solid #ecae59;
+  border-bottom: 2px solid #ecae59;
+  height: 43px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .Button-worlds {
-	color: #d8a85c;
-	border: none;
-	cursor: pointer;
-	background: transparent;
-	/* font-size: 1.1em; */
-	font-family: "Game of Thrones";
-	transform: translate(0px, 1px);
-	transition: transform .13s;
+  color: #d8a85c;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  /* font-size: 1.1em; */
+  font-family: "Game of Thrones";
+  transform: translate(0px, 1px);
+  transition: transform 0.13s;
 }
 .Button-worlds:hover {
-	transform: scale(1.04);
-	color: #e2b87e;
+  transform: scale(1.04);
+  color: #e2b87e;
 }
 
 .Button-characters {
-	color: #d8a85c;
-	border: none;
-	cursor: pointer;
-	background: transparent;
-	/* font-size: 1.1em; */
-	font-family: "Game of Thrones";
-	transform: translate(0px, 1px);
-	transition: transform .13s;
+  color: #d8a85c;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  /* font-size: 1.1em; */
+  font-family: "Game of Thrones";
+  transform: translate(0px, 1px);
+  transition: transform 0.13s;
 }
 .Button-characters:hover {
-	transform: scale(1.04);
-	color: #e2b87e;
+  transform: scale(1.04);
+  color: #e2b87e;
 }
 
 .Button-aboutGOG {
-	color: #d8a85c;
-	border: none;
-	cursor: pointer;
-	background: transparent;
-	/* font-size: 1.1em; */
-	font-family: "Game of Thrones";
-	transition: transform .13s;
+  color: #d8a85c;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  /* font-size: 1.1em; */
+  font-family: "Game of Thrones";
+  transition: transform 0.13s;
 }
 .Button-aboutGOG:hover {
-	transform: scale(1.04);
-	color: #e2b87e;
+  transform: scale(1.04);
+  color: #e2b87e;
 }
 
 .Map {
-	background-image: url(./components/assets/map.svg);
-	height: 500px;
-	background-position: center;
-	border-bottom: 4px solid #2b4045;
+  background-image: url(./components/assets/map-big.png);
+  height: 1050px;
+  background-position: center;
+  cursor: pointer;
+  box-shadow: inset 0px 10px 10px rgba(0, 0, 0, 0.25),
+    inset 0px -10px 10px rgba(0, 0, 0, 0.25);
 }
 
 main {
-	background: linear-gradient(0deg, #1e3032 19.84%, #374c4f 71.64%);
-	display: flex;
-	justify-content: center;
+  background: linear-gradient(0deg, #1e3032 19.84%, #374c4f 71.64%);
+  display: flex;
+  justify-content: center;
+  /* height: 100vh; */
 }
 
 .Main-Start {
-	padding-top: 30px;
+  padding-top: 30px;
 }
 
 .Banner {
-	display: flex;
-	justify-content: center;
-	margin: 0 20px 0 20px;
+  display: flex;
+  justify-content: center;
+  margin: 0 20px 0 20px;
 }
 
 .Text {
-	margin: 15px 100px 20px 100px;
-	font-size: 1.4em;
-	padding-top: 30px;
-	text-align: justify;
+  margin: 15px 100px 20px 100px;
+  font-size: 1.4em;
+  padding-top: 30px;
+  text-align: justify;
+  font-family: "Didact Gothic", sans-serif;
+  color: #e8e8e8;
 }
 
 aside {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	max-width: 1100px;
-	margin: 30px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1100px;
+  margin: 30px 0 0 0;
 }
 
 .First-Aside {
-	margin: 0 80px 30px 80px;
-	color: #e8e8e8;
+  margin: 0 40px 30px 40px;
+  color: #e8e8e8;
 }
 
 .Second-Aside {
-	margin: 0 80px 30px 80px;
-	color: #e8e8e8;
+  margin: 0 40px 30px 40px;
+  color: #e8e8e8;
 }
 
 .Glenn {
-	margin: 65px 0 40px 0;
-	display: flex;
-	justify-content: center;
+  display: flex;
+  justify-content: center;
+}
+
+.Glenn .glenn {
+  margin: 65px 0 40px 0;
+  display: flex;
+  justify-content: center;
 }
 
 .Snake {
-	display: flex;
-	justify-content: center;
-	transform: scale(0.5);
-	width: 100%;
+  display: flex;
+  justify-content: center;
+  transform: scale(0.5);
+  width: 100%;
 }
 
 .GOG-Banner {
-	display: none;
+  display: none;
 }
 
 .BannerMediaInfo {
-	display: none;
+  display: none;
+}
+
+.Mini-Glenn {
+  display: none;
 }
 
 @media (max-width: 1600px) {
-	.Text {
-		margin: 15px 190px 20px 190px;
-		font-size: 1.4em;
-		padding-top: 30px;
-		text-align: justify;
-	}
+  .Text {
+    margin: 15px 100px 20px 100px;
+    font-size: 1.4em;
+    padding-top: 30px;
+    text-align: justify;
+  }
 
-	.Banner {
-		display: none;
-	}
+  .Banner {
+    display: none;
+  }
 
-	.BannerMediaInfo {
-		display: block;
-		display: flex;
-		justify-content: center;
-	}
+  .BannerMediaInfo {
+    display: block;
+    display: flex;
+    justify-content: center;
+  }
 
-	.Snake {
-		display: flex;
-		justify-content: center;
-		transform: scale(0.5);
-		width: 100%;
-	}
+  .Snake {
+    display: flex;
+    justify-content: center;
+    transform: scale(0.5);
+    width: 100%;
+  }
 }
 
 @media (max-width: 1200px) {
-	main {
-		flex-direction: column;
-		padding-bottom: 40px;
-		padding-top: 0px;
-	}
+  main {
+    flex-direction: column;
+    padding-bottom: 40px;
+    padding-top: 0px;
+  }
 
-	.BannerMediaInfo {
-		display: none;
-	}
+  .Text {
+    margin: 15px 70px 20px 70px;
+    font-size: 1.4em;
+    padding-top: 30px;
+    text-align: justify;
+  }
 
-	.Text {
-		margin: 0 100px 20px 100px;
-		padding-top: 0;
-	}
+  .GOG-Banner {
+    display: block;
+    float: left;
+    transform: translate(-30px, -70px);
+    margin: 0 40px 0 160px;
+  }
 
-	.GOG-Banner {
-		display: block;
-		float: left;
-		transform: translate(0px, -70px);
-		margin: 0 40px 0 160px;
-	}
+  .Snake {
+    display: flex;
+    justify-content: center;
+    transform: scale(0.5);
+    width: 100%;
+  }
 
-	.Snake {
-		display: flex;
-		justify-content: center;
-		transform: scale(0.5);
-		width: 100%;
-	}
+  .BannerMediaInfo {
+    display: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .About-GOG-Media {
+    display: block;
+    background-image: url(../src/components/assets/aboutGOGmedia.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 120px;
+    margin-top: 40px;
+  }
+
+  .About-GOG {
+    display: none;
+  }
+
+  .Text {
+    margin: 15px 40px 20px 40px;
+    font-size: 1.4em;
+    padding-top: 30px;
+    text-align: justify;
+  }
+
+  .First-Aside {
+    margin: 0 20px 30px 20px;
+    color: #e8e8e8;
+  }
+
+  .Second-Aside {
+    margin: 0 20px 30px 20px;
+    color: #e8e8e8;
+  }
+
+  .Glenn .glenn {
+    display: none;
+  }
+
+  .Mini-Glenn {
+    display: flex;
+  }
+
+  .gog-banner {
+    display: block;
+    float: left;
+    transform: translate(-50px, 0px);
+  }
+
+  .About-Box {
+    margin: 0;
+  }
+}
+
+@media (max-width: 800px) {
+  .Button-worlds {
+    font-size: 0.8em;
+  }
+
+  .Button-characters {
+    font-size: 0.8em;
+  }
+
+  .Button-aboutGOG {
+    font-size: 0.8em;
+  }
 }
 
 .SearchBar {
-	padding-top: 40px;
-	padding-bottom: 20px;
+  padding-top: 60px;
+  padding-bottom: 20px;
 }
 
 .character-input {
-	padding: 5px 10px 5px 10px;
-	width: 300px;
+  padding: 5px 10px 5px 10px;
+  width: 300px;
 }
 
 .btm-add-character {
-	font-family: 'Didact Gothic', sans-serif;
-	margin-bottom: 50px;
-	padding: 10px 20px 10px 20px;
-	width: 150px;
-	border: none;
-	background: #3A5358;
-	border: 1px solid #ECAE59;
-	box-sizing: border-box;
-	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-	color: #ffffff;
+  font-family: "Didact Gothic", sans-serif;
+  margin-bottom: 50px;
+  padding: 10px 20px 10px 20px;
+  width: 150px;
+  border: none;
+  background: #3a5358;
+  border: 1px solid #ecae59;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: #e8e8e8;
 }
 
 .character-item {
-	background-image: url(../src/components/assets/character-card-frame.svg);
-	background-repeat: no-repeat;
-	background-position: center;
-	width: 350px;
-	height: 425px;
+  background-image: url(../src/components/assets/character-card-frame.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 445px;
 }
 
 .card-content {
-	font-family: 'Didact Gothic', sans-serif;
-	display: flex;
-	flex-direction: column;
-	padding: 5px 10px 30px 10px;
-	justify-content: space-evenly;
+  font-family: "Didact Gothic", sans-serif;
+  display: flex;
+  flex-direction: column;
+  padding: 5px 13px 25px 13px;
+  justify-content: space-evenly;
 }
 
 .name-box {
-	display: flex;
-	justify-content: space-between;
-	padding: 0 10px 0 10px;
-	
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px 0 10px;
 }
 
 .name {
-	padding: 6px 0 0 0;
-	font-size: 1.14em;
+  padding: 6px 0 0 0;
+  font-size: 1.14em;
+  color: #e8e8e8;
 }
 
 .btm-box {
-	display: flex;
-	justify-self: right;
-	align-items: right;
-	background: transparent;
-	border: none;
-
+  display: flex;
+  justify-self: right;
+  align-items: right;
+  background: transparent;
+  border: none;
 }
 
 .btm-delete-box {
-	background-image: url(../src/components/assets/skull-delete.svg);
-	background-repeat: no-repeat;
-	height: 27px;
-	width: 23px;
-	margin: 10px;
-	border: none;
-	margin: 4px 0px 2px 10px;
-	background-position: center;
-	transition: transform .2s;
+  background-image: url(../src/components/assets/skull-delete.svg);
+  background-repeat: no-repeat;
+  height: 27px;
+  width: 27px;
+  border: none;
+  margin: 4px 0 2px 10px;
+  background-position: center;
+  transition: transform 0.2s;
 }
-
 .btm-delete-box:hover {
-transform: rotate(0.1turn) scale(1.8 );
+  transform: rotate(0.1turn) scale(1.8);
 }
 
 .btm-delete {
-	height: 27px;
-	width: 23px;
-	border: none;
-	background: transparent;
-	outline: none;
-	cursor: pointer;
+  height: 29px;
+  width: 29px;
+  border: none;
+  background: transparent;
 }
 
 .btm-edit-box {
-	background-image: url(../src/components/assets/pen-edit.svg);
-	background-repeat: no-repeat;
-	height: 27px;
-	width: 23px;
-	margin: 4px 0 2px 10px;
-	border: none;
-	background-position: center;
-	transition: transform .2s;
+  background-image: url(../src/components/assets/edit.svg);
+  background-repeat: no-repeat;
+  height: 29px;
+  width: 29px;
+  margin: 4px 0 2px 10px;
+  border: none;
+  background-position: center;
+  transition: transform 0.2s;
 }
-
 .btm-edit-box:hover {
-	transform: rotate(1turn) scale(1.8 );
+  transform: rotate(1turn) scale(1.8);
 }
 
 .btm-edit {
-	height: 27px;
-	width: 23px;
-	border: none;
-	background: transparent;
-	outline: none;
-	cursor: pointer;
+  height: 29px;
+  width: 29px;
+  border: none;
+  background: transparent;
 }
 
 .id {
-	display: none;
+  display: none;
+  font-family: "Didact Gothic";
+  color: #e8e8e8;
 }
 
 .world {
-	display: flex;
-	padding-top: 0px;
-	height: 73px;
-	justify-content: space-between;
+  display: flex;
+  padding-top: 0px;
+  height: 73px;
+  justify-content: space-between;
 }
 
 .world-pic-inside {
-	padding-right: 15px;
-	padding-top: 1.2em;
+  padding-right: 15px;
+  padding-top: 1.2em;
 }
 
 .world-text {
-	padding-left: 10px;
-	padding-top: 1.7em;
-}
-
-.world-pic {
-	height: 70px;
-}
-
-.iq {
-	padding: 10px;
-	padding-top: 12px;
-	padding-bottom: 0px;
-}
-
-.power {
-	padding: 10px;
-	padding-top: 14px;
-	padding-bottom: 0px;
-}
-
-.backstory {
-	padding: 10px;
-	height: 90px;
-	line-height: 1em;
+  padding-left: 10px;
+  padding-top: 1.7em;
 }
 
 .world-backs-card-col {
-	color:#ECAE59;
+  font-weight: bolder;
+  color: #ecae59;
+}
+
+.world-pic {
+  height: 70px;
+}
+
+.iq {
+  padding: 15px 10px 10px 10px;
+  font-family: "Didact Gothic";
+  color: #e8e8e8;
+}
+
+.power {
+  padding: 10px;
+  font-family: "Didact Gothic";
+  color: #e8e8e8;
+}
+
+.backstory {
+  padding: 10px;
+  height: 90px;
+  font-family: "Didact Gothic";
+  color: #e8e8e8;
+}
+
+.About-GOG {
+  background-image: url(../src/components/assets/aboutGOG.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 120px;
+  margin-top: 40px;
+  font-family: "Didact Gothic";
+  color: #e8e8e8;
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import glenn from "../components/assets/glenn.png";
+import miniGlenn from "../components/assets/mini-glenn.png";
 import banner1 from "../components/assets/banner1.svg";
 import banner2 from "../components/assets/banner2.svg";
 import bannerMedia from "../components/assets/bannerMedia.svg";
@@ -9,7 +10,9 @@ import GOG from "../components/assets/GOG-Banner.svg";
 
 const Start = () => (
   <div className="App-start">
-    <div className="Map"></div>
+    <div className="Map-Box">
+      <div className="Map"></div>
+    </div>
     <main className="Main-Start">
       <div className="GOG-Banner">
         <img src={GOG} className="gog-banner" alt="snake" />
@@ -29,6 +32,7 @@ const Start = () => (
           </p>
           <div className="Glenn">
             <img src={glenn} className="glenn" alt="glenn" />
+            <img src={miniGlenn} className="Mini-Glenn" alt="mini-glenn" />
           </div>
         </div>
         <div className="Second-Aside">
