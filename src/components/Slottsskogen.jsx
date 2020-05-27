@@ -49,11 +49,10 @@ const Slottsskogen = () => {
 
   return (
     <div className="border">
+
       <div className="border-arthur">
         <h1 className="h1">Slottsskogen</h1>
-        <div>
           <img src="Slottsskogen-big.svg" alt="Karta över Slottsskogen"></img>
-        </div>
         <p className="p1">
           Den stora uppslukande skogen öster om Hufvudstaden, där det är svårt
           att skilja på dag och natt då delar av skogen har träd som når sällan
@@ -62,10 +61,10 @@ const Slottsskogen = () => {
           det social och har lätt till skratt. Visdomen från de äldre går inte
           att hitta i någon annan del av världen.
         </p>
-        <h2 className="h2">Karaktärer som är här</h2>
-        <div className="container">
-          <div className="persons">{outputCharacters}</div>
         </div>
+
+      <div className="container">
+        <div className="persons">{outputCharacters}</div>
       </div>
     </div>
   );

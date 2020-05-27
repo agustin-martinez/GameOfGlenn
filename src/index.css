@@ -43,10 +43,15 @@ main {
   max-width: 1200px;
 }
 
-/* .border-arthur {
+.border-arthur {
   margin: 40px 100px 50px 100px;
   text-align: center;
-} */
+  border: 1px solid white;
+  background-image: url(../src/components/assets/Slottsskogen-big-in-assets.svg);
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.2s;
+}
 
 /* .header {
 	background: linear-gradient(179.89deg, #374C4F 0.99%, #5D767B 133.08%);
