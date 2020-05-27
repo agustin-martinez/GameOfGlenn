@@ -43,44 +43,9 @@ main {
   max-width: 1200px;
 }
 
-/* .border-arthur {
-  margin: 40px 100px 50px 100px;
-  text-align: center;
-} */
-
-/* .header {
-	background: linear-gradient(179.89deg, #374C4F 0.99%, #5D767B 133.08%);
-	min-height: 10vh;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	font-size: calc(10px + 2vmin);
-	font-family: 'Didact Gothic';
-	color: #D39933;
-} */
-
-/* ul {
-	display: flex;
-	justify-content: center;
-	width: 100%;
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	overflow: hidden;
-	background-color: #2B4045;
-	border: 2.5px solid #ECAE59;
-	border-left: 0px;
-	border-right: 0px;
-} */
-
 ul {
   list-style-type: none;
 }
-
-/* li {
-	float: left;
-} */
 
 li a,
 .dropbtn {
@@ -101,24 +66,30 @@ li.dropdown {
 }
 
 .dropdown-content {
+  background-image: url(../src/components/assets/cool-menu.svg);
+  background-repeat: no-repeat;
   display: none;
   position: absolute;
-  /* top: 187px; */
-  background-color: #2b4045;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  transform: translate(-25px, 0);
+  width: 150px;
+  height: 190px;
   z-index: 1;
-  border: 1.5px solid #ecae59;
   color: #ecae59;
-  padding: 1em;
-  padding-bottom: 5px;
+  padding-top: 0.5px;
+  margin-top: -1px;
+  font-family: "Didact Gothic", sans-serif;
 }
 
 .dropdown-content div {
   position: relative;
-  padding: 0px 0px 5px 0px;
+  padding: 0px 0px 0px 0px;
   text-decoration: none;
   display: block;
   text-align: left;
+  font-family: "Didact Gothic", sans-serif;
+  margin-left: -13px;
+  margin-top: 16px;
+  text-align: center;
 }
 
 .dropdown-content :hover {
