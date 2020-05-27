@@ -44,7 +44,8 @@ const Hisingen = () => {
 
     return (
         
-		<div className="gris">
+      <div className="border">
+        <div>
 			<h1 className="h1">
 				Hisingen
 			</h1>
@@ -52,7 +53,7 @@ const Hisingen = () => {
 				<img src="Hisingen.svg" alt="Karta över Hisingen">
 				</img>
 			</div>
-			<p className="p1">
+			<p className="Text">
 			Ön som är belägen väster om fastlandet, ett relativt lugnt hav måste korsas för att nå dit.
             Ön beskrivs nästan alltid och speciellt från hufvudstadsbor att de inte tillhör denna värld, ett utryck som delvis funnits i alla tider men också mycket på grund av kriminalitetens fäste där ute. 
             Ön består av mycket åkrar och en del skog, ön är även uppdelad i många små mörka samhällen. 
@@ -66,6 +67,7 @@ const Hisingen = () => {
             <div className="persons">{outputCharacters}</div>
             </div>
 		</div>
+    </div>
         
         
     )
