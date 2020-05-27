@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+
 .App-start {
 	width: 100%;
+	font-family: 'Didact Gothic', sans-serif;
 }
+
 
 .Logo-Background {
 	display: flex;
@@ -121,7 +125,7 @@ main {
 	font-size: 1.4em;
 	padding-top: 30px;
 	text-align: justify;
-	font-family: 'Didact Gothic';
+	font-family: 'Didact Gothic', sans-serif;
 	color: #E8E8E8;
 }
 
@@ -345,7 +349,7 @@ aside {
 }
 
 .name {
-	padding: 10px 0 0 0;
+	padding: 6px 0 0 0;
 	font-family: 'Didact Gothic';
 	color: #E8E8E8;
 }
@@ -400,7 +404,7 @@ aside {
 
 .world {
 	display: flex;
-	padding-top: 15px;
+	padding-top: 10px;
 	height: 70px;
 	align-items: center;
 	font-family: 'Didact Gothic';
@@ -418,7 +422,7 @@ aside {
 }
 
 .iq {
-	padding: 10px;
+	padding: 15px 10px 10px 10px;
 	font-family: 'Didact Gothic';
 	color: #E8E8E8;
 }

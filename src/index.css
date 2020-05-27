@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+
+.App-start {
+	width: 100%;
+	font-family: 'Didact Gothic', sans-serif;
+}
+
 body {
 	margin: 0;
 	padding: 0;
@@ -7,7 +14,6 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	color: white;
-
 }
 
 code {
