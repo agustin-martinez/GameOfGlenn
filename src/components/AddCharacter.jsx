@@ -232,7 +232,7 @@ const charactersForm = (
         <option value="" disabled hidden>Världar...</option>
         <option value={'Hufvudstaden'}>Hufvudstaden</option>
         <option value={'Donsö'}>Donsö</option>
-        <option value={'Honö'}>Honö</option>
+        <option value={'Slottsskogen'}>Slottsskogen</option>
         <option value={'Hisingen'}>Hisingen</option>
       </select>
 

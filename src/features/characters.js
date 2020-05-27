@@ -25,7 +25,6 @@ const initialState = [
     id: 1,
     name: "RAGNHILD",
     world: "Hufvudstaden",
-    pic: hufvudstaden,
     backstory:
       "Gandalf är enbart hobernas och nordmännens namn på honom. Alverna känner honom som Mithrandir Grå vandrare och även männen av Gondor. ",
     strength: 6,
@@ -34,8 +33,7 @@ const initialState = [
   {
     id: 2,
     name: "BO",
-    world: "Slottskogen",
-    pic: slotts,
+    world: "Slottsskogen",
     backstory:
       "Gandalf är enbart hobernas och nordmännens namn på honom. Alverna känner honom som Mithrandir Grå vandrare och även männen av Gondor. ",
     strength: 4,
@@ -45,7 +43,6 @@ const initialState = [
     id: 3,
     name: "LARS",
     world: "Donsö",
-    pic: donsö,
     backstory:
       "Gandalf är enbart hobernas och nordmännens namn på honom. Alverna känner honom som Mithrandir Grå vandrare och även männen av Gondor. ",
     strength: 3,
@@ -55,7 +52,6 @@ const initialState = [
     id: 4,
     name: "KARL",
     world: "Hisingen",
-    pic: hisingen,
     backstory:
       "Gandalf är enbart hobernas och nordmännens namn på honom. Alverna känner honom som Mithrandir Grå vandrare och även männen av Gondor. ",
     strength: 5,

@@ -46,7 +46,7 @@ const Donso = () => {
 					Donso
 				</h1>
 				<div>
-					<img src="Donso.svg" alt="Karta över Donso">
+					<img src="Donso-big.svg" alt="Karta över Donso">
 					</img>
 				</div>
 				<p className="p1">

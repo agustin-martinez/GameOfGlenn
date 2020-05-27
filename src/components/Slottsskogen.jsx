@@ -45,7 +45,7 @@ const Slottsskogen = () => {
          <div>
             <h1 className="h1">Slottsskogen</h1>
             <div>
-            <img src="Slottsskogen.svg" alt="Karta över Slottsskogen"></img>
+            <img src="Slottsskogen-big.svg" alt="Karta över Slottsskogen"></img>
             </div>
                 <p className="p1">
                     Den stora uppslukande skogen öster om Hufvudstaden, 

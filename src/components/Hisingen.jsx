@@ -48,7 +48,7 @@ const Hisingen = () => {
 				Hisingen
 			</h1>
 			<div>
-				<img src="Hisingen.svg" alt="Karta över Hisingen">
+				<img src="Hisingen-big.svg" alt="Karta över Hisingen">
 				</img>
 			</div>
 			<p className="p1">

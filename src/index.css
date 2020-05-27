@@ -10,6 +10,8 @@ body {
 
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap'); 
+
 html {
 	min-height: 100%;
 	background: linear-gradient(0deg, #1E3032 19.84%, #374C4F 71.64%);
