@@ -368,7 +368,7 @@ aside {
 .name-box {
   display: flex;
   justify-content: space-between;
-  padding: 0 10px 0 10px;
+  padding: 0 0px 0 px;
 }
 
 .name {
@@ -391,7 +391,7 @@ aside {
   height: 27px;
   width: 27px;
   border: none;
-  margin: 4px 0 2px 10px;
+  margin: 4px 0 2px 3px;
   background-position: center;
   transition: transform 0.2s;
 }

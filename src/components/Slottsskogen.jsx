@@ -3,16 +3,16 @@ import { useSelector } from "react-redux";
 
 const Slottsskogen = () => {
   const charactersData = useSelector((state) => state.characters);
-  const [fromSlottskogen, setfromSlottskogen] = useState([]);
+  const [fromSlottsskogen, setfromSlottsskogen] = useState([]);
 
   useEffect(() => {
     const results = charactersData.filter((item) =>
-      item.world.includes("Slottskogen")
+      item.world.includes("Slottsskogen")
     );
-    setfromSlottskogen(results);
+    setfromSlottsskogen(results);
   }, [charactersData]);
 
-  const outputCharacters = fromSlottskogen.map((charItem) => (
+  const outputCharacters = fromSlottsskogen.map((charItem) => (
     <div className="character-item" key={charItem.id}>
       <div className="card-content">
         <div className="name-box">

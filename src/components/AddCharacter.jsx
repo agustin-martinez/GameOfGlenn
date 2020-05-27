@@ -54,7 +54,7 @@ let btnDisableStrength = true;
 let btnDisableIntelligence = true;
 
 const isValidLength = l => {
-    if  (l.length < 2 || l.length > 20) 
+    if  (l.length < 2 || l.length > 14) 
     return false;
     else 
     return true;
@@ -152,7 +152,7 @@ if( touchedName ) {
   if( isValidLength(valueName) )
   nameValMess = ''
   else
-  nameValMess = 'Fyll i minst 2 tecken och max 20, tack'
+  nameValMess = 'Fyll i minst 2 tecken och max 14, tack'
 }
 
 let homeWorldValMess = '';
@@ -220,9 +220,9 @@ const charactersForm = (
   <div>
     <form className="flexRowShow" onSubmit={handleSubmit} id="test">
     
-    <span className="space-for-val">  <label>Förnamn, (efternamn)</label>  <span>{nameValMess}</span>  </span>
+    <span className="space-for-val">  <label>Namn</label>  <span>{nameValMess}</span>  </span>
 
-      <input type="text" className={cssClassName} value={valueName} placeholder="Fyll i förnamn (efternamn)"
+      <input type="text" className={cssClassName} value={valueName} placeholder="Fyll i namn"
       onChange={handleChangeFormName} onBlur={event => setTouchedName(true)} />
 
       <span className="space-for-val">  <label>Värld</label>  <span>{homeWorldValMess}</span>  </span>
