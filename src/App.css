@@ -112,8 +112,9 @@ ul {
 
 .Map-Box {
   overflow: scroll;
-  height: 500px;
+  height: 500px;  
 }
+
 
 .Map {
   background-image: url(./components/assets/map-big.png);
@@ -122,6 +123,7 @@ ul {
   cursor: pointer;
   box-shadow: inset 0px 10px 10px rgba(0, 0, 0, 0.25),
     inset 0px -10px 10px rgba(0, 0, 0, 0.25);
+    cursor: grab; cursor : -o-grab; cursor : -moz-grab; cursor : -webkit-grab;
 }
 
 main {
@@ -486,11 +488,36 @@ aside {
   color: #e8e8e8;
 }
 
+/* padding: 10px;
+height: 90px;
+font-family: "Didact Gothic";
+color: #e8e8e8;
+overflow-y: hidden; */
+
+
 .backstory {
   padding: 10px;
-  height: 90px;
+  height: 95px;
   font-family: "Didact Gothic";
   color: #e8e8e8;
+  overflow-y: hidden;
+  background-color: none;
+
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
+  overflow-y: scroll; /* Add the ability to scroll */
+  background: -webkit-linear-gradient(
+    rgba(255, 255, 255, 0) 0%,
+    rgb(194, 194, 194, 0.15) 100%
+); 
+}
+
+.backstory::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE and Edge */
+.backstory {
+  -ms-overflow-style: none;
 }
 
 .About-GOG {
