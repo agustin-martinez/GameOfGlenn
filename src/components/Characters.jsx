@@ -5,6 +5,8 @@ import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { actions } from "../features/characters";
 import { actions as actionsEdit } from "../features/editCharacter";
+// import hufvudstaden from "../components/assets/hufvudstaden.svg";
+import "../App.css";
 import "../popup.css";
 import "../form.css";
 
@@ -64,7 +66,7 @@ const Characters = () => {
   );
 
   const outputCharacters = resultList.map((charItem) => (
-    <div className="character-item" key={charItem.name}>
+    <div className="character-item" key={charItem.id}>
       <div className="card-content">
         <div className="name-box">
           <div className="name"> {charItem.name} </div>
@@ -74,23 +76,22 @@ const Characters = () => {
                 className="btm-edit"
                 onClick={() => handleEdit(charItem)}
               ></button>
-                            <button
-                onClick={() => handleEdit(charItem)}
-              ></button>
             </div>
             <div className="btm-delete-box">
               <button
                 className="btm-delete"
-                onClick={() => dispatch(actions.removeCharacter(charItem.name))}
+                onClick={() => dispatch(actions.removeCharacter(charItem.id))}
               ></button>
             </div>
           </div>
         </div>
         <div className="world">
-          <div className="world-text"> VÄRLD: {charItem.world} </div>
-          <div className="world-pic"> {charItem.pic} </div>
+          <div className="world-text"> <span className="world-backs-card-col">VÄRLD: </span>{charItem.world} </div>
+          <div className="world-pic">
+          <img className="world-pic-inside" src={`${charItem.world}.svg`} alt="Karta över Hisingen"></img>
+				</div>
         </div>
-        <div className="backstory"> BACKSTORY: {charItem.backstory} </div>
+        <div className="backstory"> <span className="world-backs-card-col">BACKSTORY: </span> {charItem.backstory} </div>
         <div className="iq">INTELLIGENS:</div>
         <input
           readOnly
