@@ -1,13 +1,13 @@
 import React from "react";
 import logo from "../components/assets/logo.svg";
 
-
 const HeaderRedux = ({ setScreenFromHeader }) => {
   return (
     <div>
       <div className="Logo-Background">
         {" "}
         <img
+          className="Logo-Pic"
           onClick={() => setScreenFromHeader("Home")}
           src={logo}
           alt="GAME OF GLENN"

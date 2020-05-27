@@ -62,7 +62,6 @@ ul {
   border: none;
   cursor: pointer;
   background: transparent;
-  /* font-size: 1.1em; */
   font-family: "Game of Thrones";
   transform: translate(0px, 1px);
   transition: transform 0.13s;
@@ -110,6 +109,11 @@ ul {
 .Button-aboutGOG:active {
 	transform: scale(1.1);
   }
+
+.Map-Box {
+  overflow: scroll;
+  height: 500px;
+}
 
 .Map {
   background-image: url(./components/assets/map-big.png);
@@ -261,6 +265,10 @@ aside {
     background-position: center;
     height: 120px;
     margin-top: 40px;
+  }
+
+  .Logo-Pic {
+    width: 300px;
   }
 
   .About-GOG {
