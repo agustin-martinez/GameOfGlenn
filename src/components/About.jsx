@@ -2,6 +2,7 @@ import React from "react";
 
 const About = () => {
   return (
+    <div className="border">
     <div className="About-Box">
       <div className="About-GOG"></div>
       <div className="About-GOG-Media"></div>
@@ -18,6 +19,7 @@ const About = () => {
         vill och med vilken story ni vill, HÄR är grunden för er att komma igång
         och använda er av genom er rollspelsresa.
       </p>
+    </div>
     </div>
   );
 };

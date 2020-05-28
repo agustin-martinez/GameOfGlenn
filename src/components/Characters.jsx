@@ -30,8 +30,7 @@ const Characters = () => {
     setResultList(
       charactersData.filter(
         (person) =>
-          person.name.toLowerCase().includes(e.target.value) ||
-          person.name.toUpperCase().includes(e.target.value)
+          person.name.toLowerCase().includes((e.target.value).toLowerCase())
       )
     );
   };
@@ -91,7 +90,7 @@ const Characters = () => {
           <img className="world-pic-inside" src={`${charItem.world}.svg`} alt="Karta över Hisingen"></img>
 				</div>
         </div>
-        <div className="backstory"> <span className="world-backs-card-col">BACKSTORY: </span> {charItem.backstory} </div>
+        <textarea readOnly spellCheck="false" className="backstory" value={charItem.backstory}></textarea>
         <div className="iq">INTELLIGENS:</div>
         <input
           readOnly

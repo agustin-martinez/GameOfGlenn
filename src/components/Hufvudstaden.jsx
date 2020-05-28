@@ -49,26 +49,22 @@ const Hufvudstaden = () => {
 
   return (
     <div className="border">
-      <div>
-        <h1 className="h1">Hufvudstaden</h1>
-        <div>
-          <img src="Hufvudstaden-big.svg" alt="Karta över Hufvudstaden"></img>
-        </div>
-        <p className="p1">
-          Hufvudstaden, världsmetropolen som är belägen i centrum av världen.
-          Glenn den 10:e, kungen av land och rike bor i slottet här. Här kan du
-          alltid hitta köpare, säljare, vandrarhem eller barer. Allt helt
-          enkelt. Vanligt förekommande är att alla heter Glenn här. Beskrivs
-          ofta av utomstående som en stökig stad med oväsen, påhitt och att
-          hufvudstadsborna tror sig vara över alla andra.{" "}
-        </p>
-
-        <h2 className="h2">Karaktärer som är här</h2>
-
-        <div className="container">
-          <div className="persons">{outputCharacters}</div>
-        </div>
+    <div className="Capital-Box">
+      <h1 className="Capital-Name">Hufvudstaden</h1>
+      <div className="Capital-Pic"></div>
+      <p className="Capital-Text">
+        Hufvudstaden, världsmetropolen som är belägen i centrum av världen.
+        Glenn den 10:e, kungen av land och rike bor i slottet här. Här kan du
+        alltid hitta köpare, säljare, vandrarhem eller barer. Allt helt enkelt.
+        Vanligt förekommande är att alla heter Glenn här. Beskrivs ofta av
+        utomstående som en stökig stad med oväsen, påhitt och att
+        hufvudstadsborna tror sig vara över alla andra.{" "}
+      </p>
+      <h2 className="Capital-Characters-Titel">Karaktärer som är här</h2>
+      <div className="container">
+        <div className="persons">{outputCharacters}</div>
       </div>
+    </div>
     </div>
   );
 };

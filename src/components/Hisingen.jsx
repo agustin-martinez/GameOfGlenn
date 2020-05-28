@@ -44,29 +44,24 @@ const Hisingen = () => {
     </div>
   ));
   return (
-    <div className="border">
-      <div>
-        <h1 className="h1">Hisingen</h1>
-        <div>
-          <img src="Hisingen-big.svg" alt="Karta över Hisingen"></img>
-        </div>
-        <p className="p1">
-          Ön som är belägen väster om fastlandet, ett relativt lugnt hav måste
-          korsas för att nå dit. Ön beskrivs nästan alltid och speciellt från
-          hufvudstadsbor att de inte tillhör denna värld, ett utryck som delvis
-          funnits i alla tider men också mycket på grund av kriminalitetens
-          fäste där ute. Ön består av mycket åkrar och en del skog, ön är även
-          uppdelad i många små mörka samhällen. En varelse ska sällan eller
-          aldrig färdas ensam när under sin vistelse här. Hisingsborna är luriga
-          varelser med ett listigt sinne och förmåga att förföra den mest
-          erfarne.
-        </p>
-        <h2 className="h2">Karaktärer som är här</h2>
-        <div className="container">
-          <div className="persons">{outputCharacters}</div>
-        </div>
+
+    <div className="Capital-Box">
+      <h1 className="Capital-Name">Hisingen</h1>
+      <div className="Capital-Pic"></div>
+      <p className="Capital-Text">
+Ön som är belägen väster om fastlandet, ett relativt lugnt hav måste korsas för att nå dit.
+ Ön beskrivs nästan alltid och speciellt från hufvudstadsbor att de inte tillhör denna värld, 
+ ett utryck som delvis funnits i alla tider men också mycket på grund av kriminalitetens fäste där ute. 
+ Ön består av mycket åkrar och en del skog, ön är även uppdelad i många små mörka samhällen. En varelse ska 
+ sällan eller aldrig färdas ensam när under sin vistelse här. Hisingsborna är luriga varelser med ett listigt 
+ sinne och förmåga att förföra den mest erfarne.
+      </p>
+
+      <div className="container">
+        <div className="persons">{outputCharacters}</div>
       </div>
     </div>
+ 
   );
 };
 export default Hisingen;
