@@ -44,7 +44,7 @@ const Donso = () => {
     </div>
   ));
   return (
-    <div className="border">
+
     <div className="Capital-Box">
       <h1 className="Capital-Name">Donsö</h1>
       <div className="Capital-Pic"></div>
@@ -60,7 +60,7 @@ Skaldjur, seglats och styrka är mottot som du måste behärska för att kunna �
         <div className="persons">{outputCharacters}</div>
       </div>
     </div>
-    </div>
+
   );
 };
 export default Donso;

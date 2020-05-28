@@ -54,7 +54,7 @@ let btnDisableStrength = true;
 let btnDisableIntelligence = true;
 
 const isValidLength = l => {
-    if  (l.length < 2 || l.length > 14) 
+    if  (l.length < 2 || l.length > 17) 
     return false;
     else 
     return true;
@@ -152,7 +152,7 @@ if( touchedName ) {
   if( isValidLength(valueName) )
   nameValMess = ''
   else
-  nameValMess = 'Fyll i minst 2 tecken och max 14, tack'
+  nameValMess = 'Fyll i minst 2 tecken och max 17, tack'
 }
 
 let homeWorldValMess = '';

@@ -41,7 +41,7 @@ const initialState = [
   },
   {
     id: 3,
-    name: "Berra Skyffelmördarn",
+    name: "Mördar Berra",
     world: "Hisingen",
     backstory:
       "Född och uppvuxen från de mörkaste av platser denna värld skådat. Har en historia få skulle klara av att ta in. ”Easy monkeyboy!",

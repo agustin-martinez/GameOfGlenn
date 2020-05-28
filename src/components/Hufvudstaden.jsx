@@ -48,7 +48,7 @@ const Hufvudstaden = () => {
   ));
 
   return (
-    <div className="border">
+
     <div className="Capital-Box">
       <h1 className="Capital-Name">Hufvudstaden</h1>
       <div className="Capital-Pic"></div>
@@ -65,7 +65,7 @@ const Hufvudstaden = () => {
         <div className="persons">{outputCharacters}</div>
       </div>
     </div>
-    </div>
+
   );
 };
 
