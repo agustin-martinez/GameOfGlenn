@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/GameOfGlenn/static/css/main.68d0e447.chunk.css",
+    "main.js": "/GameOfGlenn/static/js/main.16d3c729.chunk.js",
+    "main.js.map": "/GameOfGlenn/static/js/main.16d3c729.chunk.js.map",
+    "runtime-main.js": "/GameOfGlenn/static/js/runtime-main.36c8aca0.js",
+    "runtime-main.js.map": "/GameOfGlenn/static/js/runtime-main.36c8aca0.js.map",
+    "static/js/2.197b9fd8.chunk.js": "/GameOfGlenn/static/js/2.197b9fd8.chunk.js",
+    "static/js/2.197b9fd8.chunk.js.map": "/GameOfGlenn/static/js/2.197b9fd8.chunk.js.map",
+    "index.html": "/GameOfGlenn/index.html",
+    "precache-manifest.a4522bcf726e8119132ebe64f89c6123.js": "/GameOfGlenn/precache-manifest.a4522bcf726e8119132ebe64f89c6123.js",
+    "service-worker.js": "/GameOfGlenn/service-worker.js",
+    "static/css/main.68d0e447.chunk.css.map": "/GameOfGlenn/static/css/main.68d0e447.chunk.css.map",
+    "static/js/2.197b9fd8.chunk.js.LICENSE.txt": "/GameOfGlenn/static/js/2.197b9fd8.chunk.js.LICENSE.txt",
+    "static/media/GOG-Banner.svg": "/GameOfGlenn/static/media/GOG-Banner.f5acbc74.svg",
+    "static/media/index.css": "/GameOfGlenn/static/media/cool-menu.13aaf573.svg",
+    "static/media/App.css": "/GameOfGlenn/static/media/skull-delete.2d0aa984.svg",
+    "static/media/banner1.svg": "/GameOfGlenn/static/media/banner1.426eb08b.svg",
+    "static/media/banner2.svg": "/GameOfGlenn/static/media/banner2.e7e810e5.svg",
+    "static/media/bannerInfo.svg": "/GameOfGlenn/static/media/bannerInfo.2cf305c2.svg",
+    "static/media/bannerMedia.svg": "/GameOfGlenn/static/media/bannerMedia.2bfdfb26.svg",
+    "static/media/glenn.png": "/GameOfGlenn/static/media/glenn.fb0187fd.png",
+    "static/media/logo.svg": "/GameOfGlenn/static/media/logo.cf234808.svg",
+    "static/media/mini-glenn.png": "/GameOfGlenn/static/media/mini-glenn.f245aa67.png",
+    "static/media/mini-slottskogen.svg": "/GameOfGlenn/static/media/mini-slottskogen.71c5e18e.svg",
+    "static/media/snake.svg": "/GameOfGlenn/static/media/snake.14d379b2.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.36c8aca0.js",
+    "static/js/2.197b9fd8.chunk.js",
+    "static/css/main.68d0e447.chunk.css",
+    "static/js/main.16d3c729.chunk.js"
+  ]
+}
