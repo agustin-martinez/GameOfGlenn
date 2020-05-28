@@ -55,7 +55,6 @@ själva beskriver ön som livets gåva till denna värld. Donsö bebos av stora 
 som under många generationer styrt och härjat i den södra ö-världen. Donsöbon är härskare över hav och skärgård. 
 Skaldjur, seglats och styrka är mottot som du måste behärska för att kunna överleva här.
       </p>
-      <h2 className="Capital-Characters-Titel">Karaktärer som är här</h2>
       <div className="container">
         <div className="persons">{outputCharacters}</div>
       </div>

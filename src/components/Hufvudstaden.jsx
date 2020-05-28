@@ -60,7 +60,7 @@ const Hufvudstaden = () => {
         utomstående som en stökig stad med oväsen, påhitt och att
         hufvudstadsborna tror sig vara över alla andra.{" "}
       </p>
-      <h2 className="Capital-Characters-Titel">Karaktärer som är här</h2>
+      {/* <h2 className="Capital-Characters-Titel">Karaktärer som är här</h2> */}
       <div className="container">
         <div className="persons">{outputCharacters}</div>
       </div>

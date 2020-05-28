@@ -58,7 +58,7 @@ const Slottsskogen = () => {
  Slottsskogsbon är en finurlig varelse som älskar det social och har lätt till skratt. 
  Visdomen från de äldre går inte att hitta i någon annan del av världen.
       </p>
-      <h2 className="Capital-Characters-Titel">Karaktärer som är här</h2>
+      {/* <h2 className="Capital-Characters-Titel">Karaktärer som är här</h2> */}
       <div className="container">
         <div className="persons">{outputCharacters}</div>
       </div>
