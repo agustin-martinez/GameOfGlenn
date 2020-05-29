@@ -1,5 +1,7 @@
 import React from "react";
 import logo from "../components/assets/logo.svg";
+import "../App.css";
+
 
 const HeaderRedux = ({ setScreenFromHeader }) => {
   return (

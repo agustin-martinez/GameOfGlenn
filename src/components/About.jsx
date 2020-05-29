@@ -1,4 +1,7 @@
 import React from "react";
+import "../App.css";
+import "../popup.css";
+import "../form.css";
 
 const About = () => {
   return (

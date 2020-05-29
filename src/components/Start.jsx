@@ -7,6 +7,9 @@ import bannerMedia from "../components/assets/bannerMedia.svg";
 import bannerMediaInfo from "../components/assets/bannerInfo.svg";
 import snake from "../components/assets/snake.svg";
 import GOG from "../components/assets/GOG-Banner.svg";
+import "../App.css";
+import "../popup.css";
+import "../form.css";
 
 const Start = () => (
   <div className="App-start">

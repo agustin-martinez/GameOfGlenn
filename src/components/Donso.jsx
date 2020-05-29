@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import "../popup.css";
 import "../form.css";
+import "../App.css";
+
+
 const Donso = () => {
   const charactersData = useSelector((state) => state.characters);
   const [fromDonso, setFromDonso] = useState([]);
@@ -44,21 +47,21 @@ const Donso = () => {
     </div>
   ));
   return (
-
-    <div className="Capital-Box">
-      <h1 className="Capital-Name">Donsö</h1>
-      <div className="Capital-Pic"></div>
-      <p className="Capital-Text">    
+    <div className="border">
+    <h1 className="Capital-Name">Dons<span className="font-add-big">ö</span></h1>
+    <div className="Capital-Pic"></div>
+  <p className="Capital-Text">
 Ön söder om hufvudstaden, du måste korsa det stormiga havet för att nå dit. 
 Ön beskrivs ofta av utbölingar som kal, blåsig och ogästvänlig. Medan öborna 
 själva beskriver ön som livets gåva till denna värld. Donsö bebos av stora släkter 
 som under många generationer styrt och härjat i den södra ö-världen. Donsöbon är härskare över hav och skärgård. 
 Skaldjur, seglats och styrka är mottot som du måste behärska för att kunna överleva här.
-      </p>
-      <div className="container">
-        <div className="persons">{outputCharacters}</div>
-      </div>
+  </p>
+    <div className="container">
+      <div className="persons">{outputCharacters}</div>
     </div>
+
+  </div>
 
   );
 };
