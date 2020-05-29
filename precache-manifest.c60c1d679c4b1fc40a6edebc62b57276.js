@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "87c8ba32cba01be0169deb32732e3039",
+    "revision": "6c3dc7733705b8ec2ebeb5d55a046b59",
     "url": "/GameOfGlenn/index.html"
   },
   {
-    "revision": "eb1fca791aa184ca641c",
-    "url": "/GameOfGlenn/static/css/main.68d0e447.chunk.css"
+    "revision": "f8cdf502efa4aae6156e",
+    "url": "/GameOfGlenn/static/css/main.3fdcf4da.chunk.css"
   },
   {
-    "revision": "ddbe3950b2adbe709bff",
-    "url": "/GameOfGlenn/static/js/2.197b9fd8.chunk.js"
+    "revision": "b3bc2b7f8cf5b0400301",
+    "url": "/GameOfGlenn/static/js/2.7e1b1d26.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/GameOfGlenn/static/js/2.197b9fd8.chunk.js.LICENSE.txt"
+    "url": "/GameOfGlenn/static/js/2.7e1b1d26.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "eb1fca791aa184ca641c",
-    "url": "/GameOfGlenn/static/js/main.16d3c729.chunk.js"
+    "revision": "f8cdf502efa4aae6156e",
+    "url": "/GameOfGlenn/static/js/main.262da41a.chunk.js"
   },
   {
     "revision": "87fa47b198386d9e28f1",
@@ -26,6 +26,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "f5acbc74b32cf0370891e20a86cee89f",
     "url": "/GameOfGlenn/static/media/GOG-Banner.f5acbc74.svg"
+  },
+  {
+    "revision": "3af178ecd64adfa098e7456e5830e5f8",
+    "url": "/GameOfGlenn/static/media/Game of Thrones.3af178ec.ttf"
   },
   {
     "revision": "229c85beb8b341958b109d5d66e1f572",
