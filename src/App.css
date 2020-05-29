@@ -1,4 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap");
+@font-face {
+  font-family: 'Game of Thrones';
+  font-style: normal;
+  src: local('Game of Thrones'), local('Game of Thrones'),
+    url('./fonts/Game of Thrones.ttf') format('ttf'), 
+}
+
 
 .App-start {
   width: 100%;

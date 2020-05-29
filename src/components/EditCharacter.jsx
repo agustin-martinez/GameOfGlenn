@@ -3,8 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { actions } from '../features/characters'
 import '../form.css';
 import '../popup.css';
-
-
+import "../App.css";
 
 const EditCharacter = ({setShowAddChild}) => {
 const dispatch = useDispatch();

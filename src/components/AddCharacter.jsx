@@ -4,6 +4,7 @@ import { actions } from '../features/characters'
 import { actions as actionsIdAdder} from '../features/idAdder'
 import '../form.css';
 import '../popup.css';
+import "../App.css";
 
 
 

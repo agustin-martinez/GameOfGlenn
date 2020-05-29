@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
+import "../App.css";
+import "../popup.css";
+import "../form.css";
 
 const Hufvudstaden = () => {
   const charactersData = useSelector((state) => state.characters);
@@ -49,22 +52,22 @@ const Hufvudstaden = () => {
 
   return (
 
-    <div className="Capital-Box">
-      <h1 className="Capital-Name">Hufvudstaden</h1>
-      <div className="Capital-Pic"></div>
-      <p className="Capital-Text">
-        Hufvudstaden, världsmetropolen som är belägen i centrum av världen.
-        Glenn den 10:e, kungen av land och rike bor i slottet här. Här kan du
-        alltid hitta köpare, säljare, vandrarhem eller barer. Allt helt enkelt.
-        Vanligt förekommande är att alla heter Glenn här. Beskrivs ofta av
-        utomstående som en stökig stad med oväsen, påhitt och att
-        hufvudstadsborna tror sig vara över alla andra.{" "}
-      </p>
-      {/* <h2 className="Capital-Characters-Titel">Karaktärer som är här</h2> */}
-      <div className="container">
-        <div className="persons">{outputCharacters}</div>
-      </div>
+    <div className="border">
+    <h1 className="Capital-Name">Hufvudstaden</h1>
+    <div className="Capital-Pic"></div>
+  <p className="Capital-Text">
+Hufvudstaden, världsmetropolen som är belägen i centrum av världen.
+    Glenn den 10:e, kungen av land och rike bor i slottet här. Här kan du
+    alltid hitta köpare, säljare, vandrarhem eller barer. Allt helt enkelt.
+    Vanligt förekommande är att alla heter Glenn här. Beskrivs ofta av
+    utomstående som en stökig stad med oväsen, påhitt och att
+    hufvudstadsborna tror sig vara över alla andra.
+  </p>
+    <div className="container">
+      <div className="persons">{outputCharacters}</div>
     </div>
+
+  </div>
 
   );
 };
