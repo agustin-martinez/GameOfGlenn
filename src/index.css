@@ -2,8 +2,8 @@
 @font-face {
   font-family: 'Game of Thrones';
   font-style: normal;
-  src: local('Game of Thrones'), local('Game of Thrones'),
-    url('./fonts/Game of Thrones.ttf') format('ttf'), 
+  src: local('Game of Thrones'), 
+       url('./fonts/Game of Thrones.ttf') format('truetype');
 }
 
 .App-start {
