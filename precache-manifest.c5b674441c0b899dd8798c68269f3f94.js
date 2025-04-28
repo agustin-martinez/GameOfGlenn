@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ff25e93948b642d970563d564d3d8eee",
+    "revision": "1f1bc0420cb71a4ecb306d5330924e60",
     "url": "/GameOfGlenn/index.html"
   },
   {
-    "revision": "154c998264ee16808287",
-    "url": "/GameOfGlenn/static/css/main.92b8f573.chunk.css"
+    "revision": "c8bb414e38ca4b0674b5",
+    "url": "/GameOfGlenn/static/css/main.ee82f394.chunk.css"
   },
   {
-    "revision": "b3bc2b7f8cf5b0400301",
-    "url": "/GameOfGlenn/static/js/2.7e1b1d26.chunk.js"
+    "revision": "a494030faa3aafee0421",
+    "url": "/GameOfGlenn/static/js/2.20db411e.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/GameOfGlenn/static/js/2.7e1b1d26.chunk.js.LICENSE.txt"
+    "url": "/GameOfGlenn/static/js/2.20db411e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "154c998264ee16808287",
-    "url": "/GameOfGlenn/static/js/main.cd1b77fe.chunk.js"
+    "revision": "c8bb414e38ca4b0674b5",
+    "url": "/GameOfGlenn/static/js/main.6985a5ec.chunk.js"
   },
   {
     "revision": "87fa47b198386d9e28f1",

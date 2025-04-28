@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/GameOfGlenn/precache-manifest.590ff63cfe8808040930a8347c346693.js"
+  "/GameOfGlenn/precache-manifest.c5b674441c0b899dd8798c68269f3f94.js"
 );
 
 self.addEventListener('message', (event) => {
