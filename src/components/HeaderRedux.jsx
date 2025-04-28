@@ -1,7 +1,19 @@
 import React from "react";
 import logo from "../components/assets/logo.svg";
 import "../App.css";
+import { splitOnSpecialChars } from "../utils/helpers";
 
+function renderGotText(text, specialChars) {
+  const chunks = splitOnSpecialChars(text, specialChars);
+    return chunks.map((item, idx) => (
+      <span
+        className={item.isSpecialChars ? "swe-chars" : "eng-chars"}
+        key={idx}
+      >
+        {item.chunk}
+      </span>
+    ));
+}
 
 const HeaderRedux = ({ setScreenFromHeader }) => {
   return (
@@ -18,7 +30,9 @@ const HeaderRedux = ({ setScreenFromHeader }) => {
       <header>
         <ul className="Tree-Options">
           <li className="dropdown">
-            <div className="Button-worlds">VÄRLDAR</div>
+            <div className="menu-main-btn">
+              {renderGotText("VÄRLDAR", ["Ö", "Ä", "Ö"])}
+            </div>
             <div className="dropdown-content">
               <div onClick={() => setScreenFromHeader("Hufvudstaden")}>
                 HUFVUDSTADEN
@@ -34,18 +48,18 @@ const HeaderRedux = ({ setScreenFromHeader }) => {
           </li>
           <li>
             <div
-              className="Button-characters"
+              className="menu-main-btn"
               onClick={() => setScreenFromHeader("Characters")}
             >
-              KARAKTÄRER
+              {renderGotText("KARAKTÄRER", ["Å", "Ä", "Ö"])}
             </div>
           </li>
           <li>
             <div
-              className="Button-aboutGOG"
+              className="menu-main-btn"
               onClick={() => setScreenFromHeader("About")}
             >
-              OM GOG
+              {renderGotText("OM GOG", ["Å", "Ä", "Ö"])}
             </div>
           </li>
         </ul>
