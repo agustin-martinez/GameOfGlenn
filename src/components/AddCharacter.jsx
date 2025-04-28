@@ -153,7 +153,7 @@ if( touchedName ) {
   if( isValidLength(valueName) )
   nameValMess = ''
   else
-  nameValMess = 'Fyll i minst 2 tecken och max 17, tack'
+  nameValMess = 'Fyll i minst 2 tecken och max 17'
 }
 
 let homeWorldValMess = '';
@@ -161,7 +161,7 @@ if( touchedHomeWorld ) {
   if( isValidLength(valueHomeworld) )
   homeWorldValMess = ''
   else
-  homeWorldValMess = 'Vänligen, välj en värld'
+  homeWorldValMess = 'Välj en värld'
 }
 
 let intelligenceValMess = '';
@@ -264,7 +264,7 @@ return (
   <div className="add-popup-content">
     <div className="add-popup-header">
       <span className="close" onClick={() => setShowAddChild(false)}>&times;</span>
-      <h2>L<span className="font-add">Ä</span>gg till karakt<span className="font-add">Ä</span>r</h2>
+      <h3>L<span className="font-add">Ä</span>gg  till  karakt<span className="font-add">Ä</span>r</h3>
     </div>
       <div className="add-popup-body">
         {charactersForm}
