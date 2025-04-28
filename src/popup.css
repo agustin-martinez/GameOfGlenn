@@ -1,90 +1,102 @@
 .add-popup {
-    position: fixed;
-    z-index: 1;
-    padding-top: 2%;
-    left: 0;
+  position: fixed;
+  z-index: 1;
+  padding-top: 2%;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.add-popup-content {
+  border-left: 3px solid #ecae59;
+  border-right: 3px solid #ecae59;
+  position: relative;
+  background-color: #2b4045;
+  margin: auto;
+  padding: 0;
+  width: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
     top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.5);
+    opacity: 1;
   }
-  
+}
 
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.add-popup-header {
+  text-align: center;
+  padding: 2px 16px;
+  background-color: #2b4045;
+  color: white;
+  border-bottom: 3px solid #ecae59;
+  border-top: 3px solid #ecae59;
+  font-family: "Game of Thrones";
+}
+
+.add-popup-body {
+  background: linear-gradient(0deg, #1e3032 19.84%, #374c4f 71.64%);
+  padding: 2px 16px;
+}
+
+.add-popup-footer {
+  text-align: center;
+  font-family: "Didact Gothic", sans-serif;
+  font-size: 1em;
+  padding: 15px 16px;
+  background-color: #2b4045;
+  color: white;
+  border-bottom: 3px solid #ecae59;
+  border-top: 3px solid #ecae59;
+}
+
+.span-col-whi {
+  color: white;
+}
+
+.span-col-ora {
+  color: #ecae59;
+}
+
+@media screen and (max-width: 800px) {
   .add-popup-content {
-    position: relative;
-    background-color: #2B4045;
-    margin: auto;
-    padding: 0;
-    width: 50%;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-    -webkit-animation-name: animatetop;
-    -webkit-animation-duration: 0.4s;
-    animation-name: animatetop;
-    animation-duration: 0.4s
+    width: 90%;
   }
-  
-  @-webkit-keyframes animatetop {
-    from {top:-300px; opacity:0} 
-    to {top:0; opacity:1}
-  }
-  
-  @keyframes animatetop {
-    from {top:-300px; opacity:0}
-    to {top:0; opacity:1}
-  }
-  
-  .close {
-    color: white;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
-  .add-popup-header {
-    text-align: center;
-    padding: 2px 16px;
-    background-color: #2B4045;
-    color: white;
-    border-bottom: 3px solid #ECAE59;
-    border-top: 3px solid #ECAE59;
-    font-family:"Game of Thrones";
-  }
-  
-  .add-popup-body {
-    background: linear-gradient(0deg, #1E3032 19.84%, #374C4F 71.64%);
-    padding: 2px 16px;}
-  
-  .add-popup-footer {
-    text-align: center;
-    font-family: 'Didact Gothic', sans-serif;
-    font-size: 1em;
-    padding: 15px 16px;
-    height: 15px;
-    background-color:  #2B4045;
-    color: white;
-    border-bottom: 3px solid #ECAE59;
-    border-top: 3px solid #ECAE59;
-  }
-
-  .span-col-whi {
-    color: white;
-  }
-  
-  .span-col-ora {
-    color: #ECAE59
-  }
-
-
-  @media screen and (max-width: 800px) {
-    .add-popup-content {
-      width: 90%;
-    }
-  }
+}

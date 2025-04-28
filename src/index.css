@@ -118,7 +118,7 @@ li.dropdown {
   z-index: 1;
   color: #ecae59;
   padding-top: 0.5px;
-  margin-top: -1px;
+  margin-top: 0px;
   font-family: "Didact Gothic", sans-serif;
 }
 

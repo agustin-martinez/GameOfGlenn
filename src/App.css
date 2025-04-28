@@ -1,11 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap");
 @font-face {
-  font-family: 'Game of Thrones';
+  font-family: "Game of Thrones";
   font-style: normal;
-  src: local('Game of Thrones'), local('Game of Thrones'),
-    url('./fonts/Game of Thrones.ttf') format('ttf'), 
+  src: local("Game of Thrones"), local("Game of Thrones"),
+    url("./fonts/Game of Thrones.ttf") format("ttf");
 }
 
+:root {
+  --base-font-size: 1em; /* Default font size */
+  --font-ratio: 0.85; /* Ratio for smaller screens */
+}
 
 .App-start {
   width: 100%;
@@ -64,7 +68,35 @@ ul {
   align-items: center;
 }
 
-.Button-worlds {
+
+
+.eng-chars {
+  font-size: var(--base-font-size);
+}
+
+.swe-chars {
+  line-height: 0px;
+  font-size: calc(var(--base-font-size) * 1.27); /* Adjusted relative to base */
+}
+
+.menu-main-btn {
+  color: #d8a85c;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  font-family: "Game of Thrones";
+  transform: translate(0px, 1px);
+  transition: transform 0.13s;
+ 
+}
+.menu-main-btn:hover {
+  transform: scale(1.04);
+  color: #e2b87e;
+}
+.menu-main-btn:active {
+  transform: scale(1.1);
+}
+/* .Button-worlds {
   color: #d8a85c;
   border: none;
   cursor: pointer;
@@ -78,15 +110,15 @@ ul {
   color: #e2b87e;
 }
 .Button-worlds:active {
-	transform: scale(1.1);
-  }
+  transform: scale(1.1);
+} */
 
-.Button-characters {
+/* .Button-characters {
   color: #d8a85c;
   border: none;
   cursor: pointer;
   background: transparent;
-  /* font-size: 1.1em; */
+  font-size: 1.1em;
   font-family: "Game of Thrones";
   transform: translate(0px, 1px);
   transition: transform 0.13s;
@@ -96,16 +128,15 @@ ul {
   color: #e2b87e;
 }
 .Button-characters:active {
-	transform: scale(1.1);
-  }
+  transform: scale(1.1);
+} */
 
-
-.Button-aboutGOG {
+/* .Button-aboutGOG {
   color: #d8a85c;
   border: none;
   cursor: pointer;
   background: transparent;
-  /* font-size: 1.1em; */
+  font-size: 1.1em;
   font-family: "Game of Thrones";
   transition: transform 0.13s;
 }
@@ -114,14 +145,13 @@ ul {
   color: #e2b87e;
 }
 .Button-aboutGOG:active {
-	transform: scale(1.1);
-  }
+  transform: scale(1.1);
+} */
 
 .Map-Box {
   overflow: scroll;
-  height: 500px;  
+  height: 500px;
 }
-
 
 .Map {
   background-image: url(./components/assets/map-big.png);
@@ -131,7 +161,10 @@ ul {
   cursor: pointer;
   box-shadow: inset 0px 10px 10px rgba(0, 0, 0, 0.25),
     inset 0px -10px 10px rgba(0, 0, 0, 0.25);
-    cursor: grab; cursor : -o-grab; cursor : -moz-grab; cursor : -webkit-grab;
+  cursor: grab;
+  cursor: -o-grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
 }
 
 .Map-Box::-webkit-scrollbar {
@@ -331,16 +364,28 @@ aside {
 }
 
 @media (max-width: 800px) {
-  .Button-worlds {
+  /* .Button-worlds {
     font-size: 0.8em;
   }
-
   .Button-characters {
     font-size: 0.8em;
+  } */
+  /* .Button-aboutGOG {
+    font-size: 0.8em;
+  } */
+
+  .menu-main-btn {
+    font-size: 0.8em;
   }
 
-  .Button-aboutGOG {
-    font-size: 0.8em;
+  .eng-chars {
+    font-size: calc(var(--base-font-size) * var(--font-ratio));
+  }
+
+  .swe-chars {
+    font-size: calc(
+      (var(--base-font-size) * 1.27) * var(--font-ratio)
+    );
   }
 }
 
@@ -370,12 +415,12 @@ aside {
   outline: none;
 }
 .btm-add-character:hover {
-	transform: scale(1.04);
-  }
-  .btm-add-character:active {
-	  transform: scale(1.22);
-	  background: #4a676d;
-	}
+  transform: scale(1.04);
+}
+.btm-add-character:active {
+  transform: scale(1.22);
+  background: #4a676d;
+}
 
 .character-item {
   background-image: url(../src/components/assets/character-card-frame.svg);
@@ -449,8 +494,8 @@ aside {
   transform: rotate(1turn) scale(1.8);
 }
 .btm-edit-box:active {
-	transform: scale(2.1);
-  }
+  transform: scale(2.1);
+}
 
 .btm-edit {
   height: 29px;
@@ -511,7 +556,6 @@ font-family: "Didact Gothic";
 color: #e8e8e8;
 overflow-y: hidden; */
 
-
 .backstory {
   padding: 10px;
   height: 95px;
@@ -526,7 +570,7 @@ overflow-y: hidden; */
   background: -webkit-linear-gradient(
     rgba(255, 255, 255, 0) 0%,
     rgb(194, 194, 194, 0.15) 100%
-); 
+  );
 }
 
 .backstory::-webkit-scrollbar {
@@ -558,19 +602,19 @@ overflow-y: hidden; */
 }
 .Capital-Name {
   font-family: "Game of Thrones";
-  color: #ECAE59;
+  color: #ecae59;
   padding: 40px 0 0px 0;
 }
- 
+
 .Capital-Text {
   font-family: "Didact Gothic", sans-serif;
-  color: #E8E8E8;
+  color: #e8e8e8;
   font-size: 1.4em;
   padding: 1em;
 }
 .Capital-Characters-Titel {
   font-family: "Game of Thrones";
-  color: #ECAE59;
+  color: #ecae59;
   padding: 40px 0 0px 0;
   font-size: 2em;
 }
@@ -578,7 +622,6 @@ overflow-y: hidden; */
 @media (max-width: 500px) {
   .Capital-Text {
     font-size: 1.1em;
-  
   }
   .Capital-Name {
     font-size: 1.15em;
